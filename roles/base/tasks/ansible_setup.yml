@@ -1,0 +1,5 @@
+- name: setup ansible and ensure latest
+  tags: ansible,ansible-setup
+  package:
+    name: ansible
+    state: latest
