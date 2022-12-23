@@ -1,2 +1,2 @@
-# Ansbile
-Asible repo to manage my home lab
+# Ansible
+Ansible repo to manage my home lab
