@@ -9,4 +9,9 @@
 
   # setup the ansible environment
   - import_tasks: ansible_setup.yml
-    
+
+  # perform remaining tasks
+  - import_tasks: system_setup/cron.yml
+
+  rescue:
+    - set_fact: task_failed=true
