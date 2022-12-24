@@ -1,8 +1,9 @@
 [workstation]
-192.168.55.2
+ArchDesktop.blarneystone.me
+ArchLaptop.blarneystone.me
 
 [server]
 
 [file_server]
-192.168.55.5
+ubuntu-server.blarneystone.me
 
