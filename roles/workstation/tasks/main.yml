@@ -16,6 +16,7 @@ tasks:
     name:
       - alacritty
       - chromium
+      - cups
       - discord
       - firefox
       - gimp
