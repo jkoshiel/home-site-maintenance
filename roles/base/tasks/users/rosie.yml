@@ -7,7 +7,7 @@
 
 - name: users | rosie | add public key
   tags: always,dotfiles,rosie,ssh,ssh-keys,users
-  authroized_key:
+  authorized_key:
     user: rosie
     key: "{{ item }}"
   with_file:
