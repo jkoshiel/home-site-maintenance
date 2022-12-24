@@ -1,10 +1,12 @@
 - name: users | rosie | add user
+  tags: always,rosie,users
   user:
     name: rosie
+    state: present
     system: yes
 
 - name: users | rosie | add public key
-  tags: dotfiles,rosie,ssh,ssh-keys,users
+  tags: always,dotfiles,rosie,ssh,ssh-keys,users
   authroized_key:
     user: rosie
     key: "{{ item }}"
@@ -12,7 +14,7 @@
     - users/rosie/ssh/rosie_id_ed25519.pub
 
 - name: users | rosie | add sudoers file
-  tags: settings,rosie,sudo,system,users
+  tags: always,settings,rosie,sudo,system,users
   copy:
     src: users/sudoers_rosie
     dest: /etc/sudoers.d/rosie
