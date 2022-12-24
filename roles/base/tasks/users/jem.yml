@@ -1,0 +1,34 @@
+- name: users | jem | create group
+  tags: groups,jem,users
+  group:
+    name: jem
+    state: present
+
+- name: users | jem | create user
+  tags: jem,sudo,users
+  user:
+    name: jem
+    group: jem
+    groups: adm,ansible,{{ sudo_group }}
+    state: present
+    shell: /bin/bash
+
+- name: users | jem | jem | add sudoers file
+  tags: jem,settings,sudo,system,users
+  copy:
+    src: users/sudoers_jem
+    dest: /etc/sudoers.d/jem
+    owner: root
+    group: root
+    mode: 0440
+
+- name: users | jem | create .ssh directory
+  tags: dotfiles,jem,ssh,users
+  file:
+    path: "{{ item.dir }}"
+    state: directory
+    owner: jem
+    group: jem
+    mode: 0700
+  with_items:
+    - {dir: '/home/jem/.ssh' }

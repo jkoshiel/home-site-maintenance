@@ -1,4 +1,9 @@
-- name: users | rose | add public key
+- name: users | rosie | add user
+  user:
+    name: rosie
+    system: yes
+
+- name: users | rosie | add public key
   tags: dotfiles,rosie,ssh,ssh-keys,users
   authroized_key:
     user: rosie
