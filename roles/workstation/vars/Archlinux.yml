@@ -1,0 +1,8 @@
+cups_package: cups
+font_hack_ttf_package: ttf-hack
+sddm_package: sddm
+jem_user_group: users
+network_manager_package: networkmanager
+virtualbox_package: virtualbox
+wireless_tools_package: wireless_tools
+wpa_supplicant_package: wpa_supplicant

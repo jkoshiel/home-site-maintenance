@@ -1,0 +1,9 @@
+- name: software | feh
+  tags: packages,feh,workstation-packages
+  package:
+    name: feh
+    state: latest
+  when:
+    - ansible_distribution == "Archlinux"
+    - feh is defined
+    - feh == true

@@ -1,0 +1,5 @@
+- name: users | jem | remove unwanted stuff from home directory
+  file:
+    path: /home/jem/{{ item }}
+    state: absent
+      - Public

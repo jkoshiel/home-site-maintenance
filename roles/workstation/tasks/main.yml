@@ -1,43 +1,11 @@
-# Load distro-specific variables
-##- include_vars: "{{ ansible_distribution }}.yml"
-##  tags: always
+## Load distro-specific variables
+- include_vars: "{{ ansible_distribution }}.yml"
+  tags: always
 
-## - block:
+- block:
   ## User configs
-##  - import_tasks: users/jem.yml
+  - import_tasks: users/jem.yml
 
   ## install software
-##  - import_tasks: software/alacritty.yml
-##  - import_tasks: software/chromium.yml
-##  - import_tasks: software/firefox.yml
-tasks:
-- name: install packages
-  package:
-    name:
-      - alacritty
-      - chromium
-      - cups
-      - discord
-      - firefox
-      - gimp
-      - git
-      - grep
-      - gzip
-      - htop
-      - kotlin
-      - libreoffice-fresh
-      - man-db
-      - nitrogen
-      - npm
-      - openssh
-      - picom
-      - python
-      - qtile
-      - reflector
-      - rust
-      - sddm
-      - vim
-      - virt-manager
-      - wget
-      - which
-      - xorg
+  - import_tasks: software/feh.yml
+
