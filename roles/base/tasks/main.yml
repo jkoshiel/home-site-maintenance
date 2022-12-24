@@ -1,0 +1,12 @@
+# Load distro-specific variables
+- include_vars: "{{ ansible_distribution }}.yml"
+  tags: always
+
+- block:
+  # make sure users exist on the system
+  - import_tasks: users/jem.yml
+  - import_tasks: users/rosie.yml
+
+  # setup the ansible environment
+  - import_tasks: ansible_setup.yml
+    
