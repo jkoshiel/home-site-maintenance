@@ -1,0 +1,10 @@
+- name: htop | install package
+  tags: packages,htop
+  package:
+    state: latest
+    name:
+      - htop
+    when:
+      - ansible_distribution in ["Ubuntu", "Debian"]
+      - htop is defined
+      - htop == true
