@@ -1,9 +1,9 @@
 [workstation]
-ArchDesktop.blarneystone.me
+ArchDesktop
 # ArchLaptop.blarneystone.me
 
 # [server]
 
 [file-server]
-ubuntu-server.blarneystone.me
+ubuntu-server
 
