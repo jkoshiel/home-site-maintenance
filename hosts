@@ -2,8 +2,8 @@
 ArchDesktop.blarneystone.me
 # ArchLaptop.blarneystone.me
 
-[server]
+# [server]
 
-[file_server]
-# ubuntu-server.blarneystone.me
+[file-server]
+ubuntu-server.blarneystone.me
 
