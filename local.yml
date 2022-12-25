@@ -28,17 +28,17 @@
   roles:
     - workstation
 
-- hosts: server
-  tags: server
-  become: true
-  roles:
-    - server
+# - hosts: server
+#  tags: server
+#  become: true
+#  roles:
+#    - server
 
-- hosts: file_server
-  tags: file_server
+- hosts: file-server
+  tags: file-server
   become: true
   roles:
-    - file_server
+    - file-server
   
 
 
