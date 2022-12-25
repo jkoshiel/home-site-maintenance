@@ -9,7 +9,7 @@
   user:
     name: jem
     group: jem
-    groups: adm,ansible,{{ sudo_group }}
+    groups: adm,{{ sudo_group }}
     state: present
     shell: /bin/bash
 
