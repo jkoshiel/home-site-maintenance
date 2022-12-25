@@ -34,11 +34,11 @@
 #  roles:
 #    - server
 
-- hosts: file-server
-  tags: file-server
+- hosts: file_server
+  tags: file_server
   become: true
   roles:
-    - file-server
+    - file_server
   
 
 
