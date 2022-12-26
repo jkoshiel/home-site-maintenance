@@ -15,16 +15,16 @@
     group: jem
     mode: 0700
   with_items:
-    - {dir: '.config' }
-    - {dir: '.config/alacritty' }
-    - {dir: '.config/qtile' }
-    - {dir: '.config/lvim' }
-    - {dir: '.keychain' }
-    - {dir: 'documents' }
-    - {dir: 'documents/ISOs' }
-    - {dir: 'VMs' }
-    - {dir: 'wallpapers' }
-    - {dir: 'wallpapers/wallpapers' }
+    - {dir: .config }
+    - {dir: .config/alacritty }
+    - {dir: .config/qtile }
+    - {dir: .config/lvim }
+    - {dir: .keychain }
+    - {dir: documents }
+    - {dir: documents/ISOs }
+    - {dir: VMs }
+    - {dir: wallpapers }
+    - {dir: wallpapers/wallpapers }
 
 - name: users | jem | copy personal config files
   tags: jem,dotfiles,users
