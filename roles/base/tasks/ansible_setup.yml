@@ -6,10 +6,11 @@
 
 - name: ansible setup | create ansible log file
   tags: ansible,ansible-setup
+  become: true
   file:
     path: /var/log/ansible.log
     owner: rosie
-    group: rosie
+    group: root
     mode: 0664
     state: touch
   changed_when: False
