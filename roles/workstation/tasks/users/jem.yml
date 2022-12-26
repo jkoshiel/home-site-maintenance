@@ -9,7 +9,7 @@
 - name: users | jem | create personal config directories
   tags: jem,settings,users,dotfiles
   file:
-    path: /home/jem/"{{ item.dir }}"
+    path: /home/jem/{{ item.dir }}
     state: directory
     owner: jem
     group: jem
