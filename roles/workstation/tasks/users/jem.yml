@@ -4,3 +4,37 @@
     state: absent
   with_items:
     - Public
+    - Templates
+
+- name: users | jem | create personal config directories
+  tags: jem,settings,users,dotfiles
+  file:
+    path: /home/jem/"{{ item.dir }}"
+    state: directory
+    owner: jem
+    group: jem
+    mode: 0700
+  with_items:
+    - {dir: '.config' }
+    - {dir: '.config/alacritty' }
+    - {dir: '.config/qtile' }
+    - {dir: '.config/lvim' }
+    - {dir: '.keychain' }
+    - {dir: 'documents' }
+    - {dir: 'documents/ISOs' }
+    - {dir: 'VMs' }
+    - {dir: 'wallpapers' }
+    - {dir: 'wallpapers/wallpapers' }
+
+- name: users | jem | copy personal config files
+  tags: jem,dotfiles,users
+  copy:
+    src: files/{{ item.src }}
+    dest: /home/jem/{{ item.dest}}
+    owner: jem
+    group: jem
+    mode: 0600
+  with_items: 
+    - { src: 'wallpapers/0198.jpg', dest: 'wallpapers/wallpapers/0198.jpg' }
+    - { src: '.bashrc', dest: '.bashrc' }
+
