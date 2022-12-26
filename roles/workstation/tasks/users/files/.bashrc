@@ -1,7 +1,7 @@
 #
 # ~/.bashrc
-
-feh --bg-scale /home/jem/wallpapers/wallpapers/0198.jpg &
+picom &&
+feh --bg-scale /home/jem/wallpapers/wallpapers/0199.jpg &&
 
 function hg() {
   history | grep "$1";
