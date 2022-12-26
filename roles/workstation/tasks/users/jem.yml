@@ -30,7 +30,7 @@
   tags: jem,dotfiles,users
   copy:
     src: files/{{ item.src }}
-    dest: /home/jem/{{ item.dest}}
+    dest: /home/jem/{{ item.dest }}
     owner: jem
     group: jem
     mode: 0600
