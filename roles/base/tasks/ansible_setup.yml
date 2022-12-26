@@ -3,3 +3,28 @@
   package:
     name: ansible
     state: latest
+
+- name: ansible setup | create ansible log file
+  tags: ansible,ansible-setup
+  file:
+    path: /var/log/ansible.log
+    owner: rosie
+    group: ansible
+    mode: 0664
+    state: touch
+  changed_when: False
+
+- name: ansible setup | add logrotate config for ansible log file
+  tags: ansible-setup
+  copy:
+    src: files/ansible_setup/logrotate
+    dest: /etc/logrotate.d/ansible
+    owner: root
+    group: root
+    mode: 0644
+
+- name: ansible setup | remove default ansible directory (/etc/ansible) from host
+  tags: ansible,ansible-setup
+  file:
+    path: /etc/ansible
+    state: absent
