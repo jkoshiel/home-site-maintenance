@@ -9,8 +9,6 @@
   become: true
   file:
     path: ./ansible.log
-    owner: rosie
-    group: rosie
     mode: 0664
     state: touch
   changed_when: False
