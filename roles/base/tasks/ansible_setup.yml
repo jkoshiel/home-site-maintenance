@@ -9,7 +9,7 @@
   file:
     path: /var/log/ansible.log
     owner: rosie
-    group: root
+    group: rosie
     mode: 0664
     state: touch
   changed_when: False
