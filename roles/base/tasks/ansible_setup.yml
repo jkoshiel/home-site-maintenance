@@ -8,7 +8,7 @@
   tags: ansible,ansible-setup
   become: true
   file:
-    path: /tmp/ansible.log
+    path: ./ansible.log
     owner: rosie
     group: rosie
     mode: 0664
