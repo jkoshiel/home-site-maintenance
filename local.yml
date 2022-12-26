@@ -1,5 +1,6 @@
 # tasks to complete before running roles
-- hosts: all
+- hosts: localhost
+  connection: local
   tags: always
   become: true
   pre_tasks:
@@ -15,30 +16,30 @@
       changed_when: False
       when: ansible_distribution in ["Debian", "Ubuntu"]
 
-# run roles
-- hosts: all
-  tags: base
-  become: true
-  roles:
-    - base
+# run roles by ansible_hostname
 
-- hosts: workstation
+- hosts: localhost
+  connection: local
+  tags: always,base
+  become: true
+  tasks:
+    - include_tasks: roles/base/tasks/main.yml
+
+- hosts: localhost
+  connection: local
   tags: workstation
   become: true
-  roles:
-    - workstation
+  tasks:
+    - include_tasks: roles/workstation/tasks/main.yml
+      when: ansible_hostname in ["ArchDesktop", "ArchLaptop"]
 
-# - hosts: server
-#  tags: server
-#  become: true
-#  roles:
-#    - server
-
-- hosts: file_server
+- hosts: localhost
+  connection: local
   tags: file_server
   become: true
-  roles:
-    - file_server
+  tasks:
+    - include_tasks: roles/file_server/tasks/main.yml
+      when: ansible_hostname in ["ubuntu-server"]
   
 
 

@@ -1,5 +1,6 @@
 amd_microcode_package: amd-ucode
 cups_package: cups
+cron_package: cronie
 font_hack_ttf_package: ttf-hack
 jem_user_group: users
 network_manager_package: networkmanager

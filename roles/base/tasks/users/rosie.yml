@@ -5,13 +5,13 @@
     state: present
     system: yes
 
-- name: users | rosie | add public key
-  tags: always,dotfiles,rosie,ssh,ssh-keys,users
-  authorized_key:
-    user: rosie
-    key: "{{ item }}"
-  with_file:
-    - users/rosie/ssh/rosie_id_ed25519.pub
+      #- name: users | rosie | add public key
+      #tags: always,dotfiles,rosie,ssh,ssh-keys,users
+      #authorized_key:
+      #user: rosie
+      #key: "{{ item }}"
+      #with_file:
+      #- users/rosie/ssh/rosie_id_ed25519.pub
 
 - name: users | rosie | add sudoers file
   tags: always,settings,rosie,sudo,system,users
