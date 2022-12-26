@@ -6,7 +6,6 @@
 
 - name: ansible setup | create ansible log file
   tags: ansible,ansible-setup
-  user: rosie
   become: true
   file:
     path: /home/rosie/ansible.log
