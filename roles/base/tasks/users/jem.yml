@@ -32,3 +32,15 @@
     mode: 0700
   with_items:
     - {dir: '/home/jem/.ssh' }
+
+
+- name: users | jem | create a test directory
+  tags: dotfiles,jem,test,users
+  file:
+    path: "{{ item.dir }}"
+    state: directory
+    owner: jem
+    group: jem
+    mode: 0700
+  with_items:
+    - {dir: '/home/jem/test' }
