@@ -1,4 +1,5 @@
 amd_microcode_package: amd-ucode
+ansible_cron_minute: "*/5"
 cups_package: cups
 cron_package: cronie
 font_hack_ttf_package: ttf-hack
