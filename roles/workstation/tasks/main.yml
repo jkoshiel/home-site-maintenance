@@ -8,4 +8,4 @@
 
   ## install software
   - import_tasks: software/feh.yml
-
+  - import_tasks: software/vim.yml

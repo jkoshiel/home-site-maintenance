@@ -1,7 +1,7 @@
-- name: software | feh
-  tags: packages,feh,workstation-packages
+- name: software | vim
+  tags: packages,vim,workstation-packages
   package:
-    name: feh
+    name: vim
     state: latest
   when:
     - ansible_distribution == "Archlinux"
