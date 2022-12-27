@@ -1,0 +1,9 @@
+
+# Start compositor
+picom -f &
+
+# Unclutter - hides the mounse cursor when not in use
+unclutter --jitter 1- --ignore-scrolling --start-hidden --fork
+
+# set the wallpaper
+feh --bg-scale /home/jem/wallpapers/wallpapers/0199.jpg &

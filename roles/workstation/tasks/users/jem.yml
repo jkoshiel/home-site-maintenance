@@ -36,5 +36,6 @@
     mode: 0600
   with_items: 
     - { src: 'wallpapers/0198.jpg', dest: 'wallpapers/wallpapers/0198.jpg' }
-    - { src: '.bashrc', dest: '.bashrc' }
+    - { src: 'bashrc', dest: '.bashrc' }
+    - { src: 'xprofile', dest: '.xprofile' }
 
