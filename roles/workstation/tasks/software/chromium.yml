@@ -1,9 +1,0 @@
-- name: software | chromium
-  tags: packages,chromium,workstation-packages
-  package:
-    name: chromium
-    state: latest
-  when:
-    - ansible_distribution == "Archlinux"
-    - chromium is defined
-    - chromium == true

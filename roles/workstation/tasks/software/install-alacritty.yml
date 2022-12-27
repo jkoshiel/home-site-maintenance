@@ -1,0 +1,22 @@
+- name: software | alacritty
+  tags: packages,workstation-packages,alacritty
+  package:
+    name: alacritty
+    state: latest
+  when:
+    - ansible_distribution == "Archlinux"
+
+- name: software | alacrity | dotfile
+  tags: workstation-packages,alacritty,workstation-packages
+  copy:
+    src: files/{{ item.src }}
+    dest: /home/jem/.config/alacritty/{{ item.dest }}
+    owner: jem
+    group: jem
+    mode: 0600
+  with_items:
+    - { src: 'alacritty.yml', dest: 'alarcritty.yml' }
+  when:
+    - ansible_distribution == "Archlinux"
+
+

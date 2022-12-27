@@ -1,7 +1,0 @@
-- name: software | man-db
-  tags: packages,man-db,workstation-packages
-  package:
-    name: man-db
-    state: latest
-  when:
-    - ansible_distribution == "Archlinux"

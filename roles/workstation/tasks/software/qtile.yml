@@ -1,0 +1,22 @@
+- name: software | qtile
+  tags: packages,workstation-packages,qtile
+  package:
+    name: qtile
+    state: latest
+  when:
+    - ansible_distribution == "Archlinux"
+
+- name: software | alacrity | dotfile
+  tags: workstation-packages,qtile,workstation-packages
+  copy:
+    src: files/qtile/{{ item.src }}
+    dest: /home/jem/.config/qtile/{{ item.dest }}
+    owner: jem
+    group: jem
+    mode: 0600
+  with_items:
+    - { src: 'config.py', dest: 'config.py' }
+  when:
+    - ansible_distribution == "Archlinux"
+
+
