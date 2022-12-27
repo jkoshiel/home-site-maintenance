@@ -29,7 +29,7 @@
   when:
     - ansible_distribution == "Archlinux"
       
-- name: software | move Hack nerdfont
+- name: software | move Hack nerdfont to local file
   copy:
     src: /home/jem/ttf/
     dest: /home/jem/Hack
@@ -38,13 +38,14 @@
     mode: 0700
     remote_src: yes
 
-- name: software | move Hack nerdfont
+- name: software | move Hack nerdfont to usr share
   copy:
     src: /home/jem/Hack/
     dest: /usr/share/fonts/
     owner: root
     group: root
     mode: 0644
+    remote_src: yes
 
 - name: software | alacritty
   tags: packages,workstation-packages,alacritty
