@@ -10,15 +10,6 @@
   when:
     - ansible_distribution == "Archlinux"
 
-- name: software | unzip Hack nerdfont
-  unarchive:
-    src: /home/jem/Hack.zip
-    dest: /home/jem
-    owner: jem
-    group: jem
-    mode: 0644
-    remote_src: yes
-
 - name: software | create new folder
   file:
     path: /home/jem/Hack
@@ -28,16 +19,16 @@
     mode: 0700
   when:
     - ansible_distribution == "Archlinux"
-      
-- name: software | move Hack nerdfont to local file
-  copy:
-    src: /home/jem/ttf/
-    dest: /home/jem/Hack
+
+- name: software | unzip Hack nerdfont
+  unarchive:
+    src: /home/jem/Hack.zip
+    dest: /home/jem/Hack/
     owner: jem
     group: jem
-    mode: 0700
+    mode: 0644
     remote_src: yes
-
+      
 - name: software | create Hack folder in usr share
   file:
     path: /usr/share/fots/Hack
