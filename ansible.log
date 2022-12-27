@@ -1,0 +1,2299 @@
+2022-12-26 22:45:59,237 p=28355 u=jem n=ansible | ansible-playbook [core 2.14.1]
+  config file = /home/jem/repos/home-site-maintenance/ansible.cfg
+  configured module search path = ['/home/jem/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3.10/site-packages/ansible
+  ansible collection location = /home/jem/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.10.9 (main, Dec 19 2022, 17:35:49) [GCC 12.2.0] (/usr/bin/python)
+  jinja version = 3.1.2
+  libyaml = True
+2022-12-26 22:45:59,237 p=28355 u=jem n=ansible | Using /home/jem/repos/home-site-maintenance/ansible.cfg as config file
+2022-12-26 22:45:59,241 p=28355 u=jem n=ansible | host_list declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2022-12-26 22:45:59,241 p=28355 u=jem n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2022-12-26 22:45:59,241 p=28355 u=jem n=ansible | script declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2022-12-26 22:45:59,241 p=28355 u=jem n=ansible | auto declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2022-12-26 22:45:59,241 p=28355 u=jem n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2022-12-26 22:45:59,241 p=28355 u=jem n=ansible | yaml declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2022-12-26 22:45:59,241 p=28355 u=jem n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2022-12-26 22:45:59,241 p=28355 u=jem n=ansible | ini declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2022-12-26 22:45:59,242 p=28355 u=jem n=ansible | Skipping due to inventory source not existing or not being readable by the current user
+2022-12-26 22:45:59,242 p=28355 u=jem n=ansible | toml declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+2022-12-26 22:45:59,242 p=28355 u=jem n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2022-12-26 22:45:59,243 p=28355 u=jem n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2022-12-26 22:45:59,279 p=28355 u=jem n=ansible | redirecting (type: modules) ansible.builtin.pacman to community.general.pacman
+2022-12-26 22:45:59,308 p=28355 u=jem n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2022-12-26 22:45:59,308 p=28355 u=jem n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2022-12-26 22:45:59,308 p=28355 u=jem n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2022-12-26 22:45:59,309 p=28355 u=jem n=ansible | PLAYBOOK: local.yml ********************************************************************************************************************************************************************************************************************************************
+2022-12-26 22:45:59,309 p=28355 u=jem n=ansible | 4 plays in local.yml
+2022-12-26 22:45:59,309 p=28355 u=jem n=ansible | PLAY [localhost] ***********************************************************************************************************************************************************************************************************************************************
+2022-12-26 22:45:59,314 p=28355 u=jem n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************************************************************************************************************
+2022-12-26 22:45:59,319 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:45:59,319 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:45:59,323 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112759.323575-28359-170240876741393 `" && echo ansible-tmp-1672112759.323575-28359-170240876741393="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112759.323575-28359-170240876741393 `" ) && sleep 0'
+2022-12-26 22:45:59,446 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/setup.py
+2022-12-26 22:45:59,446 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmps2k0ruc2 TO /home/jem/.ansible/tmp/ansible-tmp-1672112759.323575-28359-170240876741393/AnsiballZ_setup.py
+2022-12-26 22:45:59,446 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112759.323575-28359-170240876741393/ /home/jem/.ansible/tmp/ansible-tmp-1672112759.323575-28359-170240876741393/AnsiballZ_setup.py && sleep 0'
+2022-12-26 22:45:59,451 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-yzsmquolmglxalzoneaqmopmvhbwnixo ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112759.323575-28359-170240876741393/AnsiballZ_setup.py'"'"' && sleep 0'
+2022-12-26 22:46:00,079 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112759.323575-28359-170240876741393/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:00,089 p=28355 u=jem n=ansible | ok: [localhost]
+2022-12-26 22:46:00,092 p=28355 u=jem n=ansible | TASK [update Arch package cache] *******************************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:00,099 p=28355 u=jem n=ansible | redirecting (type: modules) ansible.builtin.pacman to community.general.pacman
+2022-12-26 22:46:00,100 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:00,100 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:00,103 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112760.103415-28439-156199912252243 `" && echo ansible-tmp-1672112760.103415-28439-156199912252243="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112760.103415-28439-156199912252243 `" ) && sleep 0'
+2022-12-26 22:46:00,109 p=28355 u=jem n=ansible | redirecting (type: modules) ansible.builtin.pacman to community.general.pacman
+2022-12-26 22:46:00,156 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible_collections/community/general/plugins/modules/pacman.py
+2022-12-26 22:46:00,156 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmppr9ud_ru TO /home/jem/.ansible/tmp/ansible-tmp-1672112760.103415-28439-156199912252243/AnsiballZ_pacman.py
+2022-12-26 22:46:00,156 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112760.103415-28439-156199912252243/ /home/jem/.ansible/tmp/ansible-tmp-1672112760.103415-28439-156199912252243/AnsiballZ_pacman.py && sleep 0'
+2022-12-26 22:46:00,160 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-csitaeenkuntsfxpsdvxtwcfnurnyxzv ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112760.103415-28439-156199912252243/AnsiballZ_pacman.py'"'"' && sleep 0'
+2022-12-26 22:46:00,242 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112760.103415-28439-156199912252243/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:00,247 p=28355 u=jem n=ansible | ok: [localhost] => {
+    "cache_updated": true,
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "executable": "pacman",
+            "extra_args": [],
+            "force": false,
+            "name": null,
+            "reason": null,
+            "reason_for": "new",
+            "remove_nosave": false,
+            "state": "present",
+            "update_cache": true,
+            "update_cache_extra_args": [],
+            "upgrade": null,
+            "upgrade_extra_args": []
+        }
+    },
+    "msg": "Would have updated the package db"
+}
+2022-12-26 22:46:00,251 p=28355 u=jem n=ansible | TASK [update Debian-based package cache] ***********************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:00,259 p=28355 u=jem n=ansible | skipping: [localhost] => {
+    "changed": false,
+    "skip_reason": "Conditional result was False"
+}
+2022-12-26 22:46:00,283 p=28355 u=jem n=ansible | PLAY [localhost] ***********************************************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:00,289 p=28355 u=jem n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:00,294 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:00,294 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:00,298 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112760.2983744-28460-233392267892881 `" && echo ansible-tmp-1672112760.2983744-28460-233392267892881="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112760.2983744-28460-233392267892881 `" ) && sleep 0'
+2022-12-26 22:46:00,304 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/setup.py
+2022-12-26 22:46:00,305 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpt4sy0wd1 TO /home/jem/.ansible/tmp/ansible-tmp-1672112760.2983744-28460-233392267892881/AnsiballZ_setup.py
+2022-12-26 22:46:00,305 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112760.2983744-28460-233392267892881/ /home/jem/.ansible/tmp/ansible-tmp-1672112760.2983744-28460-233392267892881/AnsiballZ_setup.py && sleep 0'
+2022-12-26 22:46:00,308 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-vcwdvvydijveofgncibsnmqdqekeywdp ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112760.2983744-28460-233392267892881/AnsiballZ_setup.py'"'"' && sleep 0'
+2022-12-26 22:46:00,914 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112760.2983744-28460-233392267892881/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:00,926 p=28355 u=jem n=ansible | ok: [localhost]
+2022-12-26 22:46:00,933 p=28355 u=jem n=ansible | TASK [include_tasks] *******************************************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:00,944 p=28355 u=jem n=ansible | statically imported: /home/jem/repos/home-site-maintenance/roles/base/tasks/users/jem.yml
+2022-12-26 22:46:00,948 p=28355 u=jem n=ansible | statically imported: /home/jem/repos/home-site-maintenance/roles/base/tasks/users/rosie.yml
+2022-12-26 22:46:00,950 p=28355 u=jem n=ansible | statically imported: /home/jem/repos/home-site-maintenance/roles/base/tasks/ansible_setup.yml
+2022-12-26 22:46:00,953 p=28355 u=jem n=ansible | statically imported: /home/jem/repos/home-site-maintenance/roles/base/tasks/system_setup/cron.yml
+2022-12-26 22:46:00,955 p=28355 u=jem n=ansible | included: /home/jem/repos/home-site-maintenance/roles/base/tasks/main.yml for localhost
+2022-12-26 22:46:00,961 p=28355 u=jem n=ansible | TASK [include_vars] ********************************************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:00,970 p=28355 u=jem n=ansible | ok: [localhost] => {
+    "ansible_facts": {
+        "amd_microcode_package": "amd-ucode",
+        "ansible_cron_minute": "*/5",
+        "cron_package": "cronie",
+        "cups_package": "cups",
+        "font_hack_ttf_package": "ttf-hack",
+        "jem_user_group": "users",
+        "network_manager_package": "networkmanager",
+        "openssh_package": "openssh",
+        "openssh_service": "sshd",
+        "python_package": "python",
+        "sddm_package": "sddm",
+        "sudo_group": "wheel",
+        "virtualbox_package": "virtualbox",
+        "wireless_tools_package": "wireless_tools",
+        "wpa_supplicant_package": "wpa_supplicant"
+    },
+    "ansible_included_var_files": [
+        "/home/jem/repos/home-site-maintenance/roles/base/tasks/vars/Archlinux.yml"
+    ],
+    "changed": false
+}
+2022-12-26 22:46:00,973 p=28355 u=jem n=ansible | TASK [users | jem | create group] ******************************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:00,982 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:00,982 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:00,985 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112760.9850378-28544-259360365287651 `" && echo ansible-tmp-1672112760.9850378-28544-259360365287651="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112760.9850378-28544-259360365287651 `" ) && sleep 0'
+2022-12-26 22:46:01,049 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/group.py
+2022-12-26 22:46:01,049 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmph7r1_05h TO /home/jem/.ansible/tmp/ansible-tmp-1672112760.9850378-28544-259360365287651/AnsiballZ_group.py
+2022-12-26 22:46:01,049 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112760.9850378-28544-259360365287651/ /home/jem/.ansible/tmp/ansible-tmp-1672112760.9850378-28544-259360365287651/AnsiballZ_group.py && sleep 0'
+2022-12-26 22:46:01,053 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-gwvzzhcmxjlcnrhyojmoqxnbqtfzyath ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112760.9850378-28544-259360365287651/AnsiballZ_group.py'"'"' && sleep 0'
+2022-12-26 22:46:01,136 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112760.9850378-28544-259360365287651/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:01,141 p=28355 u=jem n=ansible | ok: [localhost] => {
+    "changed": false,
+    "gid": 1000,
+    "invocation": {
+        "module_args": {
+            "gid": null,
+            "local": false,
+            "name": "jem",
+            "non_unique": false,
+            "state": "present",
+            "system": false
+        }
+    },
+    "name": "jem",
+    "state": "present",
+    "system": false
+}
+2022-12-26 22:46:01,145 p=28355 u=jem n=ansible | TASK [users | jem | create user] *******************************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:01,154 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:01,154 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:01,157 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112761.157837-28561-222693763616881 `" && echo ansible-tmp-1672112761.157837-28561-222693763616881="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112761.157837-28561-222693763616881 `" ) && sleep 0'
+2022-12-26 22:46:01,234 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/user.py
+2022-12-26 22:46:01,235 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpa5h3rsr3 TO /home/jem/.ansible/tmp/ansible-tmp-1672112761.157837-28561-222693763616881/AnsiballZ_user.py
+2022-12-26 22:46:01,235 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112761.157837-28561-222693763616881/ /home/jem/.ansible/tmp/ansible-tmp-1672112761.157837-28561-222693763616881/AnsiballZ_user.py && sleep 0'
+2022-12-26 22:46:01,239 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-bgysdusywgzeqnxxipajufvmerjljbie ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112761.157837-28561-222693763616881/AnsiballZ_user.py'"'"' && sleep 0'
+2022-12-26 22:46:01,347 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112761.157837-28561-222693763616881/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:01,353 p=28355 u=jem n=ansible | ok: [localhost] => {
+    "append": false,
+    "changed": false,
+    "comment": "",
+    "group": 1000,
+    "groups": "adm,wheel",
+    "home": "/home/jem",
+    "invocation": {
+        "module_args": {
+            "append": false,
+            "authorization": null,
+            "comment": null,
+            "create_home": true,
+            "expires": null,
+            "force": false,
+            "generate_ssh_key": null,
+            "group": "jem",
+            "groups": [
+                "adm",
+                "wheel"
+            ],
+            "hidden": null,
+            "home": null,
+            "local": null,
+            "login_class": null,
+            "move_home": false,
+            "name": "jem",
+            "non_unique": false,
+            "password": null,
+            "password_expire_max": null,
+            "password_expire_min": null,
+            "password_lock": null,
+            "profile": null,
+            "remove": false,
+            "role": null,
+            "seuser": null,
+            "shell": "/bin/bash",
+            "skeleton": null,
+            "ssh_key_bits": 0,
+            "ssh_key_comment": "ansible-generated on ArchDesktop",
+            "ssh_key_file": null,
+            "ssh_key_passphrase": null,
+            "ssh_key_type": "rsa",
+            "state": "present",
+            "system": false,
+            "uid": null,
+            "umask": null,
+            "update_password": "always"
+        }
+    },
+    "move_home": false,
+    "name": "jem",
+    "shell": "/bin/bash",
+    "state": "present",
+    "uid": 1000
+}
+2022-12-26 22:46:01,359 p=28355 u=jem n=ansible | TASK [users | jem | jem | add sudoers file] ********************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:01,366 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:01,367 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:01,370 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112761.3705297-28580-230098536191271 `" && echo ansible-tmp-1672112761.3705297-28580-230098536191271="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112761.3705297-28580-230098536191271 `" ) && sleep 0'
+2022-12-26 22:46:01,433 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/stat.py
+2022-12-26 22:46:01,434 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpcnho4zky TO /home/jem/.ansible/tmp/ansible-tmp-1672112761.3705297-28580-230098536191271/AnsiballZ_stat.py
+2022-12-26 22:46:01,434 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112761.3705297-28580-230098536191271/ /home/jem/.ansible/tmp/ansible-tmp-1672112761.3705297-28580-230098536191271/AnsiballZ_stat.py && sleep 0'
+2022-12-26 22:46:01,437 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-yrxdeobujreuugeglfecwfhwotcxlxsv ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112761.3705297-28580-230098536191271/AnsiballZ_stat.py'"'"' && sleep 0'
+2022-12-26 22:46:01,571 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/file.py
+2022-12-26 22:46:01,571 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpkluijx2m TO /home/jem/.ansible/tmp/ansible-tmp-1672112761.3705297-28580-230098536191271/AnsiballZ_file.py
+2022-12-26 22:46:01,571 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112761.3705297-28580-230098536191271/ /home/jem/.ansible/tmp/ansible-tmp-1672112761.3705297-28580-230098536191271/AnsiballZ_file.py && sleep 0'
+2022-12-26 22:46:01,575 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-pcfnutkgwqpuvmpnsyrpgksemxhkzcdb ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112761.3705297-28580-230098536191271/AnsiballZ_file.py'"'"' && sleep 0'
+2022-12-26 22:46:01,658 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112761.3705297-28580-230098536191271/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:01,663 p=28355 u=jem n=ansible | ok: [localhost] => {
+    "changed": false,
+    "checksum": "7ce2416ada78bb013746cabfd3f37c3ca4b214a1",
+    "dest": "/etc/sudoers.d/jem",
+    "diff": {
+        "after": {
+            "path": "/etc/sudoers.d/jem"
+        },
+        "before": {
+            "path": "/etc/sudoers.d/jem"
+        }
+    },
+    "gid": 0,
+    "group": "root",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": "sudoers_jem",
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "dest": "/etc/sudoers.d/jem",
+            "follow": true,
+            "force": false,
+            "group": "root",
+            "mode": 288,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": "root",
+            "path": "/etc/sudoers.d/jem",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "file",
+            "unsafe_writes": false
+        }
+    },
+    "mode": "0440",
+    "owner": "root",
+    "path": "/etc/sudoers.d/jem",
+    "size": 28,
+    "state": "file",
+    "uid": 0
+}
+2022-12-26 22:46:01,668 p=28355 u=jem n=ansible | TASK [users | jem | create .ssh directory] *********************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:01,681 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:01,681 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:01,685 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112761.6853738-28604-34671128593866 `" && echo ansible-tmp-1672112761.6853738-28604-34671128593866="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112761.6853738-28604-34671128593866 `" ) && sleep 0'
+2022-12-26 22:46:01,690 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/file.py
+2022-12-26 22:46:01,691 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmp3qa3009u TO /home/jem/.ansible/tmp/ansible-tmp-1672112761.6853738-28604-34671128593866/AnsiballZ_file.py
+2022-12-26 22:46:01,691 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112761.6853738-28604-34671128593866/ /home/jem/.ansible/tmp/ansible-tmp-1672112761.6853738-28604-34671128593866/AnsiballZ_file.py && sleep 0'
+2022-12-26 22:46:01,694 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-smxjsqbyvfgutcrygfdgiyhlsqhxhouk ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112761.6853738-28604-34671128593866/AnsiballZ_file.py'"'"' && sleep 0'
+2022-12-26 22:46:01,778 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112761.6853738-28604-34671128593866/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:01,784 p=28355 u=jem n=ansible | ok: [localhost] => (item={'dir': '/home/jem/.ssh'}) => {
+    "ansible_loop_var": "item",
+    "changed": false,
+    "diff": {
+        "after": {
+            "path": "/home/jem/.ssh"
+        },
+        "before": {
+            "path": "/home/jem/.ssh"
+        }
+    },
+    "gid": 1000,
+    "group": "jem",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": "jem",
+            "mode": 448,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": "jem",
+            "path": "/home/jem/.ssh",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "directory",
+            "unsafe_writes": false
+        }
+    },
+    "item": {
+        "dir": "/home/jem/.ssh"
+    },
+    "mode": "0700",
+    "owner": "jem",
+    "path": "/home/jem/.ssh",
+    "size": 163,
+    "state": "directory",
+    "uid": 1000
+}
+2022-12-26 22:46:01,790 p=28355 u=jem n=ansible | TASK [users | rosie | add user] ********************************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:01,797 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:01,798 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:01,801 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112761.8014052-28621-182457139716396 `" && echo ansible-tmp-1672112761.8014052-28621-182457139716396="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112761.8014052-28621-182457139716396 `" ) && sleep 0'
+2022-12-26 22:46:01,806 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/user.py
+2022-12-26 22:46:01,807 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpq67ghhen TO /home/jem/.ansible/tmp/ansible-tmp-1672112761.8014052-28621-182457139716396/AnsiballZ_user.py
+2022-12-26 22:46:01,807 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112761.8014052-28621-182457139716396/ /home/jem/.ansible/tmp/ansible-tmp-1672112761.8014052-28621-182457139716396/AnsiballZ_user.py && sleep 0'
+2022-12-26 22:46:01,810 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-gxuijijitliutglazbbmzpzzqzfgeokz ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112761.8014052-28621-182457139716396/AnsiballZ_user.py'"'"' && sleep 0'
+2022-12-26 22:46:01,918 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112761.8014052-28621-182457139716396/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:01,925 p=28355 u=jem n=ansible | ok: [localhost] => {
+    "append": false,
+    "changed": false,
+    "comment": "",
+    "group": 960,
+    "home": "/home/rosie",
+    "invocation": {
+        "module_args": {
+            "append": false,
+            "authorization": null,
+            "comment": null,
+            "create_home": true,
+            "expires": null,
+            "force": false,
+            "generate_ssh_key": null,
+            "group": null,
+            "groups": null,
+            "hidden": null,
+            "home": null,
+            "local": null,
+            "login_class": null,
+            "move_home": false,
+            "name": "rosie",
+            "non_unique": false,
+            "password": null,
+            "password_expire_max": null,
+            "password_expire_min": null,
+            "password_lock": null,
+            "profile": null,
+            "remove": false,
+            "role": null,
+            "seuser": null,
+            "shell": null,
+            "skeleton": null,
+            "ssh_key_bits": 0,
+            "ssh_key_comment": "ansible-generated on ArchDesktop",
+            "ssh_key_file": null,
+            "ssh_key_passphrase": null,
+            "ssh_key_type": "rsa",
+            "state": "present",
+            "system": true,
+            "uid": null,
+            "umask": null,
+            "update_password": "always"
+        }
+    },
+    "move_home": false,
+    "name": "rosie",
+    "shell": "/bin/bash",
+    "state": "present",
+    "uid": 960
+}
+2022-12-26 22:46:01,928 p=28355 u=jem n=ansible | TASK [users | rosie | add sudoers file] ************************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:01,935 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:01,935 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:01,939 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112761.9392352-28640-250811377850184 `" && echo ansible-tmp-1672112761.9392352-28640-250811377850184="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112761.9392352-28640-250811377850184 `" ) && sleep 0'
+2022-12-26 22:46:01,945 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/stat.py
+2022-12-26 22:46:01,945 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmphor6u_cv TO /home/jem/.ansible/tmp/ansible-tmp-1672112761.9392352-28640-250811377850184/AnsiballZ_stat.py
+2022-12-26 22:46:01,945 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112761.9392352-28640-250811377850184/ /home/jem/.ansible/tmp/ansible-tmp-1672112761.9392352-28640-250811377850184/AnsiballZ_stat.py && sleep 0'
+2022-12-26 22:46:01,949 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-bdbqftxbheotmbviwjxperazhsqcgsfo ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112761.9392352-28640-250811377850184/AnsiballZ_stat.py'"'"' && sleep 0'
+2022-12-26 22:46:02,036 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/file.py
+2022-12-26 22:46:02,036 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpp5_kiaof TO /home/jem/.ansible/tmp/ansible-tmp-1672112761.9392352-28640-250811377850184/AnsiballZ_file.py
+2022-12-26 22:46:02,036 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112761.9392352-28640-250811377850184/ /home/jem/.ansible/tmp/ansible-tmp-1672112761.9392352-28640-250811377850184/AnsiballZ_file.py && sleep 0'
+2022-12-26 22:46:02,040 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-bpoqouorhvakmuspfbnblwcmbzhgnmqc ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112761.9392352-28640-250811377850184/AnsiballZ_file.py'"'"' && sleep 0'
+2022-12-26 22:46:02,123 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112761.9392352-28640-250811377850184/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:02,129 p=28355 u=jem n=ansible | ok: [localhost] => {
+    "changed": false,
+    "checksum": "6c449b87035ea8096f9b689dc63610c7535606c3",
+    "dest": "/etc/sudoers.d/rosie",
+    "diff": {
+        "after": {
+            "path": "/etc/sudoers.d/rosie"
+        },
+        "before": {
+            "path": "/etc/sudoers.d/rosie"
+        }
+    },
+    "gid": 0,
+    "group": "root",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": "sudoers_rosie",
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "dest": "/etc/sudoers.d/rosie",
+            "follow": true,
+            "force": false,
+            "group": "root",
+            "mode": 288,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": "root",
+            "path": "/etc/sudoers.d/rosie",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "file",
+            "unsafe_writes": false
+        }
+    },
+    "mode": "0440",
+    "owner": "root",
+    "path": "/etc/sudoers.d/rosie",
+    "size": 30,
+    "state": "file",
+    "uid": 0
+}
+2022-12-26 22:46:02,133 p=28355 u=jem n=ansible | TASK [setup ansible and ensure latest] *************************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:02,144 p=28355 u=jem n=ansible | redirecting (type: modules) ansible.builtin.pacman to community.general.pacman
+2022-12-26 22:46:02,145 p=28355 u=jem n=ansible | redirecting (type: modules) ansible.builtin.pacman to community.general.pacman
+2022-12-26 22:46:02,145 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:02,145 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:02,148 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112762.1484933-28664-219923071761787 `" && echo ansible-tmp-1672112762.1484933-28664-219923071761787="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112762.1484933-28664-219923071761787 `" ) && sleep 0'
+2022-12-26 22:46:02,153 p=28355 u=jem n=ansible | redirecting (type: modules) ansible.builtin.pacman to community.general.pacman
+2022-12-26 22:46:02,154 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible_collections/community/general/plugins/modules/pacman.py
+2022-12-26 22:46:02,155 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmp2r2999w8 TO /home/jem/.ansible/tmp/ansible-tmp-1672112762.1484933-28664-219923071761787/AnsiballZ_pacman.py
+2022-12-26 22:46:02,155 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112762.1484933-28664-219923071761787/ /home/jem/.ansible/tmp/ansible-tmp-1672112762.1484933-28664-219923071761787/AnsiballZ_pacman.py && sleep 0'
+2022-12-26 22:46:02,158 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-xplbewnqtbcemadtfjoaogpmbvcemcuj ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112762.1484933-28664-219923071761787/AnsiballZ_pacman.py'"'"' && sleep 0'
+2022-12-26 22:46:02,743 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112762.1484933-28664-219923071761787/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:02,749 p=28355 u=jem n=ansible | ok: [localhost] => {
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "executable": "pacman",
+            "extra_args": [],
+            "force": false,
+            "name": [
+                "ansible"
+            ],
+            "reason": null,
+            "reason_for": "new",
+            "remove_nosave": false,
+            "state": "latest",
+            "update_cache": null,
+            "update_cache_extra_args": [],
+            "upgrade": null,
+            "upgrade_extra_args": []
+        }
+    },
+    "msg": "package(s) already installed",
+    "packages": []
+}
+2022-12-26 22:46:02,754 p=28355 u=jem n=ansible | TASK [ansible setup | create ansible log file] *****************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:02,761 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:02,761 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:02,765 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112762.7648675-28688-146743364654945 `" && echo ansible-tmp-1672112762.7648675-28688-146743364654945="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112762.7648675-28688-146743364654945 `" ) && sleep 0'
+2022-12-26 22:46:02,770 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/file.py
+2022-12-26 22:46:02,770 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpobfn5qiq TO /home/jem/.ansible/tmp/ansible-tmp-1672112762.7648675-28688-146743364654945/AnsiballZ_file.py
+2022-12-26 22:46:02,771 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112762.7648675-28688-146743364654945/ /home/jem/.ansible/tmp/ansible-tmp-1672112762.7648675-28688-146743364654945/AnsiballZ_file.py && sleep 0'
+2022-12-26 22:46:02,774 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-wguwocsqjbyejhxkifleivkmqgmtgtzj ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112762.7648675-28688-146743364654945/AnsiballZ_file.py'"'"' && sleep 0'
+2022-12-26 22:46:02,858 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112762.7648675-28688-146743364654945/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:02,863 p=28355 u=jem n=ansible | ok: [localhost] => {
+    "changed": false,
+    "dest": "./ansible.log",
+    "gid": 1000,
+    "group": "jem",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": null,
+            "mode": 436,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": null,
+            "path": "./ansible.log",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "touch",
+            "unsafe_writes": false
+        }
+    },
+    "mode": "0644",
+    "owner": "jem",
+    "size": 39994,
+    "state": "file",
+    "uid": 1000
+}
+2022-12-26 22:46:02,866 p=28355 u=jem n=ansible | TASK [ansible setup | add logrotate config for ansible log file] ***********************************************************************************************************************************************************************************************
+2022-12-26 22:46:02,873 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:02,874 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:02,877 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112762.8771057-28705-29036898291583 `" && echo ansible-tmp-1672112762.8771057-28705-29036898291583="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112762.8771057-28705-29036898291583 `" ) && sleep 0'
+2022-12-26 22:46:02,882 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/stat.py
+2022-12-26 22:46:02,883 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpzi39uyf2 TO /home/jem/.ansible/tmp/ansible-tmp-1672112762.8771057-28705-29036898291583/AnsiballZ_stat.py
+2022-12-26 22:46:02,883 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112762.8771057-28705-29036898291583/ /home/jem/.ansible/tmp/ansible-tmp-1672112762.8771057-28705-29036898291583/AnsiballZ_stat.py && sleep 0'
+2022-12-26 22:46:02,886 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-aedcvlzlrabmjabsolerqwjrzpopfvqt ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112762.8771057-28705-29036898291583/AnsiballZ_stat.py'"'"' && sleep 0'
+2022-12-26 22:46:02,973 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/file.py
+2022-12-26 22:46:02,973 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmp3w_runkj TO /home/jem/.ansible/tmp/ansible-tmp-1672112762.8771057-28705-29036898291583/AnsiballZ_file.py
+2022-12-26 22:46:02,974 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112762.8771057-28705-29036898291583/ /home/jem/.ansible/tmp/ansible-tmp-1672112762.8771057-28705-29036898291583/AnsiballZ_file.py && sleep 0'
+2022-12-26 22:46:02,977 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-cwfmgeqbawrwwbqxlpsporfwskbikjsl ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112762.8771057-28705-29036898291583/AnsiballZ_file.py'"'"' && sleep 0'
+2022-12-26 22:46:03,060 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112762.8771057-28705-29036898291583/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:03,066 p=28355 u=jem n=ansible | ok: [localhost] => {
+    "changed": false,
+    "checksum": "4401dbf521e1cc1dd7a69fdbcfe21004ba721d1f",
+    "dest": "/etc/logrotate.d/ansible",
+    "diff": {
+        "after": {
+            "path": "/etc/logrotate.d/ansible"
+        },
+        "before": {
+            "path": "/etc/logrotate.d/ansible"
+        }
+    },
+    "gid": 0,
+    "group": "root",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": "logrotate",
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "dest": "/etc/logrotate.d/ansible",
+            "follow": true,
+            "force": false,
+            "group": "root",
+            "mode": 420,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": "root",
+            "path": "/etc/logrotate.d/ansible",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "file",
+            "unsafe_writes": false
+        }
+    },
+    "mode": "0644",
+    "owner": "root",
+    "path": "/etc/logrotate.d/ansible",
+    "size": 80,
+    "state": "file",
+    "uid": 0
+}
+2022-12-26 22:46:03,069 p=28355 u=jem n=ansible | TASK [ansible setup | remove default ansible directory (/etc/ansible) from host] *******************************************************************************************************************************************************************************
+2022-12-26 22:46:03,078 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:03,078 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:03,081 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112763.0809991-28729-37150151918399 `" && echo ansible-tmp-1672112763.0809991-28729-37150151918399="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112763.0809991-28729-37150151918399 `" ) && sleep 0'
+2022-12-26 22:46:03,086 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/file.py
+2022-12-26 22:46:03,086 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpq6r2sm_n TO /home/jem/.ansible/tmp/ansible-tmp-1672112763.0809991-28729-37150151918399/AnsiballZ_file.py
+2022-12-26 22:46:03,086 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112763.0809991-28729-37150151918399/ /home/jem/.ansible/tmp/ansible-tmp-1672112763.0809991-28729-37150151918399/AnsiballZ_file.py && sleep 0'
+2022-12-26 22:46:03,090 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-elakhkpqvardsqeoedywctperwoujcji ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112763.0809991-28729-37150151918399/AnsiballZ_file.py'"'"' && sleep 0'
+2022-12-26 22:46:03,172 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112763.0809991-28729-37150151918399/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:03,179 p=28355 u=jem n=ansible | ok: [localhost] => {
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": null,
+            "mode": null,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": null,
+            "path": "/etc/ansible",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "absent",
+            "unsafe_writes": false
+        }
+    },
+    "path": "/etc/ansible",
+    "state": "absent"
+}
+2022-12-26 22:46:03,182 p=28355 u=jem n=ansible | TASK [system setup | cron | install cron package] **************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:03,191 p=28355 u=jem n=ansible | redirecting (type: modules) ansible.builtin.pacman to community.general.pacman
+2022-12-26 22:46:03,191 p=28355 u=jem n=ansible | redirecting (type: modules) ansible.builtin.pacman to community.general.pacman
+2022-12-26 22:46:03,191 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:03,191 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:03,195 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112763.1948733-28746-26255803115010 `" && echo ansible-tmp-1672112763.1948733-28746-26255803115010="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112763.1948733-28746-26255803115010 `" ) && sleep 0'
+2022-12-26 22:46:03,199 p=28355 u=jem n=ansible | redirecting (type: modules) ansible.builtin.pacman to community.general.pacman
+2022-12-26 22:46:03,200 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible_collections/community/general/plugins/modules/pacman.py
+2022-12-26 22:46:03,200 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmp4c4pkdb0 TO /home/jem/.ansible/tmp/ansible-tmp-1672112763.1948733-28746-26255803115010/AnsiballZ_pacman.py
+2022-12-26 22:46:03,201 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112763.1948733-28746-26255803115010/ /home/jem/.ansible/tmp/ansible-tmp-1672112763.1948733-28746-26255803115010/AnsiballZ_pacman.py && sleep 0'
+2022-12-26 22:46:03,204 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-iqpldnknvqdxpubdljmqhwnqbczfepoc ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112763.1948733-28746-26255803115010/AnsiballZ_pacman.py'"'"' && sleep 0'
+2022-12-26 22:46:03,780 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112763.1948733-28746-26255803115010/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:03,786 p=28355 u=jem n=ansible | ok: [localhost] => {
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "executable": "pacman",
+            "extra_args": [],
+            "force": false,
+            "name": [
+                "cronie"
+            ],
+            "reason": null,
+            "reason_for": "new",
+            "remove_nosave": false,
+            "state": "latest",
+            "update_cache": null,
+            "update_cache_extra_args": [],
+            "upgrade": null,
+            "upgrade_extra_args": []
+        }
+    },
+    "msg": "package(s) already installed",
+    "packages": []
+}
+2022-12-26 22:46:03,791 p=28355 u=jem n=ansible | TASK [system setup | cron | start and enable cronie daemon] ****************************************************************************************************************************************************************************************************
+2022-12-26 22:46:03,802 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:03,802 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:03,805 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112763.8053186-28770-186023285888200 `" && echo ansible-tmp-1672112763.8053186-28770-186023285888200="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112763.8053186-28770-186023285888200 `" ) && sleep 0'
+2022-12-26 22:46:03,929 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/systemd.py
+2022-12-26 22:46:03,929 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmphe2q3a45 TO /home/jem/.ansible/tmp/ansible-tmp-1672112763.8053186-28770-186023285888200/AnsiballZ_systemd.py
+2022-12-26 22:46:03,930 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112763.8053186-28770-186023285888200/ /home/jem/.ansible/tmp/ansible-tmp-1672112763.8053186-28770-186023285888200/AnsiballZ_systemd.py && sleep 0'
+2022-12-26 22:46:03,933 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-twqdgpuujgjtbpkqwggggprslejfcbuv ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112763.8053186-28770-186023285888200/AnsiballZ_systemd.py'"'"' && sleep 0'
+2022-12-26 22:46:04,090 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112763.8053186-28770-186023285888200/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:04,099 p=28355 u=jem n=ansible | ok: [localhost] => {
+    "changed": false,
+    "enabled": true,
+    "invocation": {
+        "module_args": {
+            "daemon_reexec": false,
+            "daemon_reload": false,
+            "enabled": true,
+            "force": null,
+            "masked": null,
+            "name": "cronie",
+            "no_block": false,
+            "scope": "system",
+            "state": "started"
+        }
+    },
+    "name": "cronie",
+    "state": "started",
+    "status": {
+        "ActiveEnterTimestamp": "Mon 2022-12-26 20:30:21 EST",
+        "ActiveEnterTimestampMonotonic": "3648595",
+        "ActiveExitTimestampMonotonic": "0",
+        "ActiveState": "active",
+        "After": "basic.target sysinit.target systemd-journald.socket system.slice",
+        "AllowIsolate": "no",
+        "AssertResult": "yes",
+        "AssertTimestamp": "Mon 2022-12-26 20:30:21 EST",
+        "AssertTimestampMonotonic": "3648238",
+        "Before": "multi-user.target shutdown.target",
+        "BlockIOAccounting": "no",
+        "BlockIOWeight": "[not set]",
+        "CPUAccounting": "yes",
+        "CPUAffinityFromNUMA": "no",
+        "CPUQuotaPerSecUSec": "infinity",
+        "CPUQuotaPeriodUSec": "infinity",
+        "CPUSchedulingPolicy": "0",
+        "CPUSchedulingPriority": "0",
+        "CPUSchedulingResetOnFork": "no",
+        "CPUShares": "[not set]",
+        "CPUUsageNSec": "64574819000",
+        "CPUWeight": "[not set]",
+        "CacheDirectoryMode": "0755",
+        "CanFreeze": "yes",
+        "CanIsolate": "no",
+        "CanReload": "yes",
+        "CanStart": "yes",
+        "CanStop": "yes",
+        "CapabilityBoundingSet": "cap_chown cap_dac_override cap_dac_read_search cap_fowner cap_fsetid cap_kill cap_setgid cap_setuid cap_setpcap cap_linux_immutable cap_net_bind_service cap_net_broadcast cap_net_admin cap_net_raw cap_ipc_lock cap_ipc_owner cap_sys_module cap_sys_rawio cap_sys_chroot cap_sys_ptrace cap_sys_pacct cap_sys_admin cap_sys_boot cap_sys_nice cap_sys_resource cap_sys_time cap_sys_tty_config cap_mknod cap_lease cap_audit_write cap_audit_control cap_setfcap cap_mac_override cap_mac_admin cap_syslog cap_wake_alarm cap_block_suspend cap_audit_read cap_perfmon cap_bpf cap_checkpoint_restore",
+        "CleanResult": "success",
+        "CollectMode": "inactive",
+        "ConditionResult": "yes",
+        "ConditionTimestamp": "Mon 2022-12-26 20:30:21 EST",
+        "ConditionTimestampMonotonic": "3648236",
+        "ConfigurationDirectoryMode": "0755",
+        "Conflicts": "shutdown.target",
+        "ControlGroup": "/system.slice/cronie.service",
+        "ControlGroupId": "1803",
+        "ControlPID": "0",
+        "CoredumpFilter": "0x33",
+        "DefaultDependencies": "yes",
+        "DefaultMemoryLow": "0",
+        "DefaultMemoryMin": "0",
+        "Delegate": "no",
+        "Description": "Periodic Command Scheduler",
+        "DevicePolicy": "auto",
+        "DynamicUser": "no",
+        "ExecMainCode": "0",
+        "ExecMainExitTimestampMonotonic": "0",
+        "ExecMainPID": "811",
+        "ExecMainStartTimestamp": "Mon 2022-12-26 20:30:21 EST",
+        "ExecMainStartTimestampMonotonic": "3648579",
+        "ExecMainStatus": "0",
+        "ExecReload": "{ path=/usr/bin/kill ; argv[]=/usr/bin/kill -HUP $MAINPID ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }",
+        "ExecReloadEx": "{ path=/usr/bin/kill ; argv[]=/usr/bin/kill -HUP $MAINPID ; flags= ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }",
+        "ExecStart": "{ path=/usr/bin/crond ; argv[]=/usr/bin/crond -n ; ignore_errors=no ; start_time=[Mon 2022-12-26 20:30:21 EST] ; stop_time=[n/a] ; pid=811 ; code=(null) ; status=0/0 }",
+        "ExecStartEx": "{ path=/usr/bin/crond ; argv[]=/usr/bin/crond -n ; flags= ; start_time=[Mon 2022-12-26 20:30:21 EST] ; stop_time=[n/a] ; pid=811 ; code=(null) ; status=0/0 }",
+        "ExitType": "main",
+        "FailureAction": "none",
+        "FileDescriptorStoreMax": "0",
+        "FinalKillSignal": "9",
+        "FragmentPath": "/usr/lib/systemd/system/cronie.service",
+        "FreezerState": "running",
+        "GID": "[not set]",
+        "GuessMainPID": "yes",
+        "IOAccounting": "no",
+        "IOReadBytes": "18446744073709551615",
+        "IOReadOperations": "18446744073709551615",
+        "IOSchedulingClass": "2",
+        "IOSchedulingPriority": "4",
+        "IOWeight": "[not set]",
+        "IOWriteBytes": "18446744073709551615",
+        "IOWriteOperations": "18446744073709551615",
+        "IPAccounting": "no",
+        "IPEgressBytes": "[no data]",
+        "IPEgressPackets": "[no data]",
+        "IPIngressBytes": "[no data]",
+        "IPIngressPackets": "[no data]",
+        "Id": "cronie.service",
+        "IgnoreOnIsolate": "no",
+        "IgnoreSIGPIPE": "yes",
+        "InactiveEnterTimestampMonotonic": "0",
+        "InactiveExitTimestamp": "Mon 2022-12-26 20:30:21 EST",
+        "InactiveExitTimestampMonotonic": "3648595",
+        "InvocationID": "218daa03464841c69c30f83a1c86e166",
+        "JobRunningTimeoutUSec": "infinity",
+        "JobTimeoutAction": "none",
+        "JobTimeoutUSec": "infinity",
+        "KeyringMode": "private",
+        "KillMode": "process",
+        "KillSignal": "15",
+        "LimitAS": "infinity",
+        "LimitASSoft": "infinity",
+        "LimitCORE": "infinity",
+        "LimitCORESoft": "infinity",
+        "LimitCPU": "infinity",
+        "LimitCPUSoft": "infinity",
+        "LimitDATA": "infinity",
+        "LimitDATASoft": "infinity",
+        "LimitFSIZE": "infinity",
+        "LimitFSIZESoft": "infinity",
+        "LimitLOCKS": "infinity",
+        "LimitLOCKSSoft": "infinity",
+        "LimitMEMLOCK": "8388608",
+        "LimitMEMLOCKSoft": "8388608",
+        "LimitMSGQUEUE": "819200",
+        "LimitMSGQUEUESoft": "819200",
+        "LimitNICE": "0",
+        "LimitNICESoft": "0",
+        "LimitNOFILE": "524288",
+        "LimitNOFILESoft": "1024",
+        "LimitNPROC": "514848",
+        "LimitNPROCSoft": "514848",
+        "LimitRSS": "infinity",
+        "LimitRSSSoft": "infinity",
+        "LimitRTPRIO": "0",
+        "LimitRTPRIOSoft": "0",
+        "LimitRTTIME": "infinity",
+        "LimitRTTIMESoft": "infinity",
+        "LimitSIGPENDING": "514848",
+        "LimitSIGPENDINGSoft": "514848",
+        "LimitSTACK": "infinity",
+        "LimitSTACKSoft": "8388608",
+        "LoadState": "loaded",
+        "LockPersonality": "no",
+        "LogLevelMax": "-1",
+        "LogRateLimitBurst": "0",
+        "LogRateLimitIntervalUSec": "0",
+        "LogsDirectoryMode": "0755",
+        "MainPID": "811",
+        "ManagedOOMMemoryPressure": "auto",
+        "ManagedOOMMemoryPressureLimit": "0",
+        "ManagedOOMPreference": "none",
+        "ManagedOOMSwap": "auto",
+        "MemoryAccounting": "yes",
+        "MemoryAvailable": "infinity",
+        "MemoryCurrent": "51015680",
+        "MemoryDenyWriteExecute": "no",
+        "MemoryHigh": "infinity",
+        "MemoryLimit": "infinity",
+        "MemoryLow": "0",
+        "MemoryMax": "infinity",
+        "MemoryMin": "0",
+        "MemorySwapMax": "infinity",
+        "MountAPIVFS": "no",
+        "NFileDescriptorStore": "0",
+        "NRestarts": "0",
+        "NUMAPolicy": "n/a",
+        "Names": "cronie.service",
+        "NeedDaemonReload": "no",
+        "Nice": "0",
+        "NoNewPrivileges": "no",
+        "NonBlocking": "no",
+        "NotifyAccess": "none",
+        "OOMPolicy": "stop",
+        "OOMScoreAdjust": "0",
+        "OnFailureJobMode": "replace",
+        "OnSuccessJobMode": "fail",
+        "Perpetual": "no",
+        "PrivateDevices": "no",
+        "PrivateIPC": "no",
+        "PrivateMounts": "no",
+        "PrivateNetwork": "no",
+        "PrivateTmp": "no",
+        "PrivateUsers": "no",
+        "ProcSubset": "all",
+        "ProtectClock": "no",
+        "ProtectControlGroups": "no",
+        "ProtectHome": "no",
+        "ProtectHostname": "no",
+        "ProtectKernelLogs": "no",
+        "ProtectKernelModules": "no",
+        "ProtectKernelTunables": "no",
+        "ProtectProc": "default",
+        "ProtectSystem": "no",
+        "RefuseManualStart": "no",
+        "RefuseManualStop": "no",
+        "ReloadResult": "success",
+        "RemainAfterExit": "no",
+        "RemoveIPC": "no",
+        "Requires": "sysinit.target system.slice",
+        "Restart": "always",
+        "RestartKillSignal": "15",
+        "RestartUSec": "100ms",
+        "RestrictNamespaces": "no",
+        "RestrictRealtime": "no",
+        "RestrictSUIDSGID": "no",
+        "Result": "success",
+        "RootDirectoryStartOnly": "no",
+        "RuntimeDirectoryMode": "0755",
+        "RuntimeDirectoryPreserve": "no",
+        "RuntimeMaxUSec": "infinity",
+        "RuntimeRandomizedExtraUSec": "0",
+        "SameProcessGroup": "no",
+        "SecureBits": "0",
+        "SendSIGHUP": "no",
+        "SendSIGKILL": "yes",
+        "Slice": "system.slice",
+        "StandardError": "inherit",
+        "StandardInput": "null",
+        "StandardOutput": "journal",
+        "StartLimitAction": "none",
+        "StartLimitBurst": "5",
+        "StartLimitIntervalUSec": "10s",
+        "StartupBlockIOWeight": "[not set]",
+        "StartupCPUShares": "[not set]",
+        "StartupCPUWeight": "[not set]",
+        "StartupIOWeight": "[not set]",
+        "StateChangeTimestamp": "Mon 2022-12-26 20:30:21 EST",
+        "StateChangeTimestampMonotonic": "3648595",
+        "StateDirectoryMode": "0755",
+        "StatusErrno": "0",
+        "StopWhenUnneeded": "no",
+        "SubState": "running",
+        "SuccessAction": "none",
+        "SyslogFacility": "3",
+        "SyslogLevel": "6",
+        "SyslogLevelPrefix": "yes",
+        "SyslogPriority": "30",
+        "SystemCallErrorNumber": "2147483646",
+        "TTYReset": "no",
+        "TTYVHangup": "no",
+        "TTYVTDisallocate": "no",
+        "TasksAccounting": "yes",
+        "TasksCurrent": "1",
+        "TasksMax": "154454",
+        "TimeoutAbortUSec": "1min 30s",
+        "TimeoutCleanUSec": "infinity",
+        "TimeoutStartFailureMode": "terminate",
+        "TimeoutStartUSec": "1min 30s",
+        "TimeoutStopFailureMode": "terminate",
+        "TimeoutStopUSec": "1min 30s",
+        "TimerSlackNSec": "50000",
+        "Transient": "no",
+        "Type": "simple",
+        "UID": "[not set]",
+        "UMask": "0022",
+        "UnitFilePreset": "disabled",
+        "UnitFileState": "enabled",
+        "UtmpMode": "init",
+        "WantedBy": "multi-user.target",
+        "WatchdogSignal": "6",
+        "WatchdogTimestampMonotonic": "0",
+        "WatchdogUSec": "0"
+    }
+}
+2022-12-26 22:46:04,102 p=28355 u=jem n=ansible | TASK [system setup | cron | schedule automatic ansible provisioning] *******************************************************************************************************************************************************************************************
+2022-12-26 22:46:04,123 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:04,123 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:04,127 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112764.1269615-28789-236715578339146 `" && echo ansible-tmp-1672112764.1269615-28789-236715578339146="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112764.1269615-28789-236715578339146 `" ) && sleep 0'
+2022-12-26 22:46:04,189 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/cron.py
+2022-12-26 22:46:04,189 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpc2petdmv TO /home/jem/.ansible/tmp/ansible-tmp-1672112764.1269615-28789-236715578339146/AnsiballZ_cron.py
+2022-12-26 22:46:04,189 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112764.1269615-28789-236715578339146/ /home/jem/.ansible/tmp/ansible-tmp-1672112764.1269615-28789-236715578339146/AnsiballZ_cron.py && sleep 0'
+2022-12-26 22:46:04,193 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-tjubgunwymemxohcctfervttpukozktb ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112764.1269615-28789-236715578339146/AnsiballZ_cron.py'"'"' && sleep 0'
+2022-12-26 22:46:04,279 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112764.1269615-28789-236715578339146/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:04,285 p=28355 u=jem n=ansible | ok: [localhost] => {
+    "changed": false,
+    "envs": [],
+    "invocation": {
+        "module_args": {
+            "backup": false,
+            "cron_file": null,
+            "day": "*",
+            "disabled": false,
+            "env": false,
+            "hour": "*",
+            "insertafter": null,
+            "insertbefore": null,
+            "job": "/usr/bin/ansible-pull -o -U https://github.com/rawToast21/home-site-maintenance.git > /dev/null",
+            "minute": "*/5",
+            "month": "*",
+            "name": "ansible provision",
+            "special_time": null,
+            "state": "present",
+            "user": "rosie",
+            "weekday": "*"
+        }
+    },
+    "jobs": [
+        "ansible provision",
+        "ansible refresh at boot"
+    ]
+}
+2022-12-26 22:46:04,289 p=28355 u=jem n=ansible | TASK [system setup | cron | schedule ansible cleanup at boot] **************************************************************************************************************************************************************************************************
+2022-12-26 22:46:04,297 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:04,297 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:04,301 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112764.3016713-28807-263830216509115 `" && echo ansible-tmp-1672112764.3016713-28807-263830216509115="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112764.3016713-28807-263830216509115 `" ) && sleep 0'
+2022-12-26 22:46:04,307 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/cron.py
+2022-12-26 22:46:04,307 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpomx0gnkn TO /home/jem/.ansible/tmp/ansible-tmp-1672112764.3016713-28807-263830216509115/AnsiballZ_cron.py
+2022-12-26 22:46:04,307 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112764.3016713-28807-263830216509115/ /home/jem/.ansible/tmp/ansible-tmp-1672112764.3016713-28807-263830216509115/AnsiballZ_cron.py && sleep 0'
+2022-12-26 22:46:04,311 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-shtvorhjcutburhacuvkpnsrhrqwskjs ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112764.3016713-28807-263830216509115/AnsiballZ_cron.py'"'"' && sleep 0'
+2022-12-26 22:46:04,396 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112764.3016713-28807-263830216509115/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:04,403 p=28355 u=jem n=ansible | ok: [localhost] => {
+    "changed": false,
+    "envs": [],
+    "invocation": {
+        "module_args": {
+            "backup": false,
+            "cron_file": null,
+            "day": "*",
+            "disabled": false,
+            "env": false,
+            "hour": "*",
+            "insertafter": null,
+            "insertbefore": null,
+            "job": "/bin/rm -rf /home/rosie/.ansible",
+            "minute": "*",
+            "month": "*",
+            "name": "ansible refresh at boot",
+            "special_time": "reboot",
+            "state": "present",
+            "user": "rosie",
+            "weekday": "*"
+        }
+    },
+    "jobs": [
+        "ansible provision",
+        "ansible refresh at boot"
+    ]
+}
+2022-12-26 22:46:04,413 p=28355 u=jem n=ansible | PLAY [localhost] ***********************************************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:04,417 p=28355 u=jem n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:04,422 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:04,422 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:04,425 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112764.4256454-28826-200195898168549 `" && echo ansible-tmp-1672112764.4256454-28826-200195898168549="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112764.4256454-28826-200195898168549 `" ) && sleep 0'
+2022-12-26 22:46:04,431 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/setup.py
+2022-12-26 22:46:04,431 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmphk46gs9d TO /home/jem/.ansible/tmp/ansible-tmp-1672112764.4256454-28826-200195898168549/AnsiballZ_setup.py
+2022-12-26 22:46:04,431 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112764.4256454-28826-200195898168549/ /home/jem/.ansible/tmp/ansible-tmp-1672112764.4256454-28826-200195898168549/AnsiballZ_setup.py && sleep 0'
+2022-12-26 22:46:04,435 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-zfdxjhvvzkznkkdrpcuvrmsrnwsngkmm ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112764.4256454-28826-200195898168549/AnsiballZ_setup.py'"'"' && sleep 0'
+2022-12-26 22:46:05,038 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112764.4256454-28826-200195898168549/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:05,049 p=28355 u=jem n=ansible | ok: [localhost]
+2022-12-26 22:46:05,056 p=28355 u=jem n=ansible | TASK [include_tasks] *******************************************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:05,069 p=28355 u=jem n=ansible | statically imported: /home/jem/repos/home-site-maintenance/roles/workstation/tasks/users/jem.yml
+2022-12-26 22:46:05,071 p=28355 u=jem n=ansible | statically imported: /home/jem/repos/home-site-maintenance/roles/workstation/tasks/software/basics.yml
+2022-12-26 22:46:05,073 p=28355 u=jem n=ansible | statically imported: /home/jem/repos/home-site-maintenance/roles/workstation/tasks/software/install-alacritty.yml
+2022-12-26 22:46:05,077 p=28355 u=jem n=ansible | statically imported: /home/jem/repos/home-site-maintenance/roles/workstation/tasks/software/qtile.yml
+2022-12-26 22:46:05,078 p=28355 u=jem n=ansible | included: /home/jem/repos/home-site-maintenance/roles/workstation/tasks/main.yml for localhost
+2022-12-26 22:46:05,083 p=28355 u=jem n=ansible | TASK [include_vars] ********************************************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:05,092 p=28355 u=jem n=ansible | ok: [localhost] => {
+    "ansible_facts": {
+        "amd_microcode_package": "amd-ucode",
+        "cups_package": "cups",
+        "font_hack_ttf_package": "ttf-hack",
+        "jem_user_group": "users",
+        "network_manager_package": "networkmanager",
+        "openssh_package": "openssh",
+        "openssh_service": "sshd",
+        "python_package": "python",
+        "sddm_package": "sddm",
+        "sudo_group": "wheel",
+        "virtualbox_package": "virtualbox",
+        "wireless_tools_package": "wireless_tools",
+        "wpa_supplicant_package": "wpa_supplicant"
+    },
+    "ansible_included_var_files": [
+        "/home/jem/repos/home-site-maintenance/roles/workstation/tasks/vars/Archlinux.yml"
+    ],
+    "changed": false
+}
+2022-12-26 22:46:05,096 p=28355 u=jem n=ansible | TASK [users | jem | remove unwanted stuff from home directory] *************************************************************************************************************************************************************************************************
+2022-12-26 22:46:05,107 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:05,107 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:05,110 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112765.1107402-28910-93889257265135 `" && echo ansible-tmp-1672112765.1107402-28910-93889257265135="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112765.1107402-28910-93889257265135 `" ) && sleep 0'
+2022-12-26 22:46:05,116 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/file.py
+2022-12-26 22:46:05,116 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpa96hx6vp TO /home/jem/.ansible/tmp/ansible-tmp-1672112765.1107402-28910-93889257265135/AnsiballZ_file.py
+2022-12-26 22:46:05,116 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112765.1107402-28910-93889257265135/ /home/jem/.ansible/tmp/ansible-tmp-1672112765.1107402-28910-93889257265135/AnsiballZ_file.py && sleep 0'
+2022-12-26 22:46:05,120 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-iaqneeebmkxzdrhfhalhyvkqpgzqjocd ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112765.1107402-28910-93889257265135/AnsiballZ_file.py'"'"' && sleep 0'
+2022-12-26 22:46:05,203 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112765.1107402-28910-93889257265135/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:05,213 p=28355 u=jem n=ansible | ok: [localhost] => (item=Public) => {
+    "ansible_loop_var": "item",
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": null,
+            "mode": null,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": null,
+            "path": "/home/jem/Public",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "absent",
+            "unsafe_writes": false
+        }
+    },
+    "item": "Public",
+    "path": "/home/jem/Public",
+    "state": "absent"
+}
+2022-12-26 22:46:05,213 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:05,215 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112765.2157204-28910-154980122553192 `" && echo ansible-tmp-1672112765.2157204-28910-154980122553192="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112765.2157204-28910-154980122553192 `" ) && sleep 0'
+2022-12-26 22:46:05,220 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/file.py
+2022-12-26 22:46:05,221 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpaefpwtjh TO /home/jem/.ansible/tmp/ansible-tmp-1672112765.2157204-28910-154980122553192/AnsiballZ_file.py
+2022-12-26 22:46:05,221 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112765.2157204-28910-154980122553192/ /home/jem/.ansible/tmp/ansible-tmp-1672112765.2157204-28910-154980122553192/AnsiballZ_file.py && sleep 0'
+2022-12-26 22:46:05,224 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-rywcrabhwshrbswwjkbzuusxsvpveljv ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112765.2157204-28910-154980122553192/AnsiballZ_file.py'"'"' && sleep 0'
+2022-12-26 22:46:05,307 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112765.2157204-28910-154980122553192/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:05,313 p=28355 u=jem n=ansible | ok: [localhost] => (item=Templates) => {
+    "ansible_loop_var": "item",
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": null,
+            "mode": null,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": null,
+            "path": "/home/jem/Templates",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "absent",
+            "unsafe_writes": false
+        }
+    },
+    "item": "Templates",
+    "path": "/home/jem/Templates",
+    "state": "absent"
+}
+2022-12-26 22:46:05,319 p=28355 u=jem n=ansible | TASK [users | jem | create personal config directories] ********************************************************************************************************************************************************************************************************
+2022-12-26 22:46:05,331 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:05,331 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:05,334 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112765.3346398-28942-203397577756676 `" && echo ansible-tmp-1672112765.3346398-28942-203397577756676="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112765.3346398-28942-203397577756676 `" ) && sleep 0'
+2022-12-26 22:46:05,340 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/file.py
+2022-12-26 22:46:05,340 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpol50z7tk TO /home/jem/.ansible/tmp/ansible-tmp-1672112765.3346398-28942-203397577756676/AnsiballZ_file.py
+2022-12-26 22:46:05,340 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112765.3346398-28942-203397577756676/ /home/jem/.ansible/tmp/ansible-tmp-1672112765.3346398-28942-203397577756676/AnsiballZ_file.py && sleep 0'
+2022-12-26 22:46:05,344 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-tnzwalytybtgciyakoyuwrqyzbwkmcjf ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112765.3346398-28942-203397577756676/AnsiballZ_file.py'"'"' && sleep 0'
+2022-12-26 22:46:05,428 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112765.3346398-28942-203397577756676/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:05,437 p=28355 u=jem n=ansible | ok: [localhost] => (item={'dir': '.config'}) => {
+    "ansible_loop_var": "item",
+    "changed": false,
+    "diff": {
+        "after": {
+            "path": "/home/jem/.config"
+        },
+        "before": {
+            "path": "/home/jem/.config"
+        }
+    },
+    "gid": 1000,
+    "group": "jem",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": "jem",
+            "mode": 448,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": "jem",
+            "path": "/home/jem/.config",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "directory",
+            "unsafe_writes": false
+        }
+    },
+    "item": {
+        "dir": ".config"
+    },
+    "mode": "0700",
+    "owner": "jem",
+    "path": "/home/jem/.config",
+    "size": 4096,
+    "state": "directory",
+    "uid": 1000
+}
+2022-12-26 22:46:05,437 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:05,439 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112765.4394293-28942-65709733268114 `" && echo ansible-tmp-1672112765.4394293-28942-65709733268114="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112765.4394293-28942-65709733268114 `" ) && sleep 0'
+2022-12-26 22:46:05,445 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/file.py
+2022-12-26 22:46:05,445 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmps6io5e1j TO /home/jem/.ansible/tmp/ansible-tmp-1672112765.4394293-28942-65709733268114/AnsiballZ_file.py
+2022-12-26 22:46:05,445 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112765.4394293-28942-65709733268114/ /home/jem/.ansible/tmp/ansible-tmp-1672112765.4394293-28942-65709733268114/AnsiballZ_file.py && sleep 0'
+2022-12-26 22:46:05,449 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-gozxtwopzonlwqwxuwfbhvbccdyqumqx ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112765.4394293-28942-65709733268114/AnsiballZ_file.py'"'"' && sleep 0'
+2022-12-26 22:46:05,532 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112765.4394293-28942-65709733268114/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:05,541 p=28355 u=jem n=ansible | ok: [localhost] => (item={'dir': '.config/alacritty'}) => {
+    "ansible_loop_var": "item",
+    "changed": false,
+    "diff": {
+        "after": {
+            "path": "/home/jem/.config/alacritty"
+        },
+        "before": {
+            "path": "/home/jem/.config/alacritty"
+        }
+    },
+    "gid": 1000,
+    "group": "jem",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": "jem",
+            "mode": 448,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": "jem",
+            "path": "/home/jem/.config/alacritty",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "directory",
+            "unsafe_writes": false
+        }
+    },
+    "item": {
+        "dir": ".config/alacritty"
+    },
+    "mode": "0700",
+    "owner": "jem",
+    "path": "/home/jem/.config/alacritty",
+    "size": 49,
+    "state": "directory",
+    "uid": 1000
+}
+2022-12-26 22:46:05,541 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:05,543 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112765.5435262-28942-118068765151302 `" && echo ansible-tmp-1672112765.5435262-28942-118068765151302="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112765.5435262-28942-118068765151302 `" ) && sleep 0'
+2022-12-26 22:46:05,549 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/file.py
+2022-12-26 22:46:05,549 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpkjl94axr TO /home/jem/.ansible/tmp/ansible-tmp-1672112765.5435262-28942-118068765151302/AnsiballZ_file.py
+2022-12-26 22:46:05,549 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112765.5435262-28942-118068765151302/ /home/jem/.ansible/tmp/ansible-tmp-1672112765.5435262-28942-118068765151302/AnsiballZ_file.py && sleep 0'
+2022-12-26 22:46:05,553 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-gdvtfpdjgowvrhbqecmvrqvqckelqchg ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112765.5435262-28942-118068765151302/AnsiballZ_file.py'"'"' && sleep 0'
+2022-12-26 22:46:05,637 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112765.5435262-28942-118068765151302/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:05,646 p=28355 u=jem n=ansible | ok: [localhost] => (item={'dir': '.config/qtile'}) => {
+    "ansible_loop_var": "item",
+    "changed": false,
+    "diff": {
+        "after": {
+            "path": "/home/jem/.config/qtile"
+        },
+        "before": {
+            "path": "/home/jem/.config/qtile"
+        }
+    },
+    "gid": 1000,
+    "group": "jem",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": "jem",
+            "mode": 448,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": "jem",
+            "path": "/home/jem/.config/qtile",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "directory",
+            "unsafe_writes": false
+        }
+    },
+    "item": {
+        "dir": ".config/qtile"
+    },
+    "mode": "0700",
+    "owner": "jem",
+    "path": "/home/jem/.config/qtile",
+    "size": 42,
+    "state": "directory",
+    "uid": 1000
+}
+2022-12-26 22:46:05,646 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:05,648 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112765.6487613-28942-139332628890808 `" && echo ansible-tmp-1672112765.6487613-28942-139332628890808="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112765.6487613-28942-139332628890808 `" ) && sleep 0'
+2022-12-26 22:46:05,653 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/file.py
+2022-12-26 22:46:05,653 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpnmwo3luz TO /home/jem/.ansible/tmp/ansible-tmp-1672112765.6487613-28942-139332628890808/AnsiballZ_file.py
+2022-12-26 22:46:05,654 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112765.6487613-28942-139332628890808/ /home/jem/.ansible/tmp/ansible-tmp-1672112765.6487613-28942-139332628890808/AnsiballZ_file.py && sleep 0'
+2022-12-26 22:46:05,657 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-cubxjuskbypeotyopbboutbjgpyosjdf ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112765.6487613-28942-139332628890808/AnsiballZ_file.py'"'"' && sleep 0'
+2022-12-26 22:46:05,742 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112765.6487613-28942-139332628890808/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:05,751 p=28355 u=jem n=ansible | ok: [localhost] => (item={'dir': '.config/lvim'}) => {
+    "ansible_loop_var": "item",
+    "changed": false,
+    "diff": {
+        "after": {
+            "path": "/home/jem/.config/lvim"
+        },
+        "before": {
+            "path": "/home/jem/.config/lvim"
+        }
+    },
+    "gid": 1000,
+    "group": "jem",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": "jem",
+            "mode": 448,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": "jem",
+            "path": "/home/jem/.config/lvim",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "directory",
+            "unsafe_writes": false
+        }
+    },
+    "item": {
+        "dir": ".config/lvim"
+    },
+    "mode": "0700",
+    "owner": "jem",
+    "path": "/home/jem/.config/lvim",
+    "size": 38,
+    "state": "directory",
+    "uid": 1000
+}
+2022-12-26 22:46:05,751 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:05,753 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112765.7535417-28942-199597380358442 `" && echo ansible-tmp-1672112765.7535417-28942-199597380358442="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112765.7535417-28942-199597380358442 `" ) && sleep 0'
+2022-12-26 22:46:05,759 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/file.py
+2022-12-26 22:46:05,759 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpq0xs3317 TO /home/jem/.ansible/tmp/ansible-tmp-1672112765.7535417-28942-199597380358442/AnsiballZ_file.py
+2022-12-26 22:46:05,760 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112765.7535417-28942-199597380358442/ /home/jem/.ansible/tmp/ansible-tmp-1672112765.7535417-28942-199597380358442/AnsiballZ_file.py && sleep 0'
+2022-12-26 22:46:05,763 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-tinjjkakgreexektfqvgxcqykxuhtpya ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112765.7535417-28942-199597380358442/AnsiballZ_file.py'"'"' && sleep 0'
+2022-12-26 22:46:05,847 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112765.7535417-28942-199597380358442/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:05,856 p=28355 u=jem n=ansible | ok: [localhost] => (item={'dir': '.keychain'}) => {
+    "ansible_loop_var": "item",
+    "changed": false,
+    "diff": {
+        "after": {
+            "path": "/home/jem/.keychain"
+        },
+        "before": {
+            "path": "/home/jem/.keychain"
+        }
+    },
+    "gid": 1000,
+    "group": "jem",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": "jem",
+            "mode": 448,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": "jem",
+            "path": "/home/jem/.keychain",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "directory",
+            "unsafe_writes": false
+        }
+    },
+    "item": {
+        "dir": ".keychain"
+    },
+    "mode": "0700",
+    "owner": "jem",
+    "path": "/home/jem/.keychain",
+    "size": 75,
+    "state": "directory",
+    "uid": 1000
+}
+2022-12-26 22:46:05,856 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:05,858 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112765.8585172-28942-214200810190926 `" && echo ansible-tmp-1672112765.8585172-28942-214200810190926="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112765.8585172-28942-214200810190926 `" ) && sleep 0'
+2022-12-26 22:46:05,864 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/file.py
+2022-12-26 22:46:05,864 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpliu7ck9r TO /home/jem/.ansible/tmp/ansible-tmp-1672112765.8585172-28942-214200810190926/AnsiballZ_file.py
+2022-12-26 22:46:05,864 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112765.8585172-28942-214200810190926/ /home/jem/.ansible/tmp/ansible-tmp-1672112765.8585172-28942-214200810190926/AnsiballZ_file.py && sleep 0'
+2022-12-26 22:46:05,867 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-vusbrxiztuhdlafrgtumxlnltiwqtsum ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112765.8585172-28942-214200810190926/AnsiballZ_file.py'"'"' && sleep 0'
+2022-12-26 22:46:05,951 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112765.8585172-28942-214200810190926/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:05,962 p=28355 u=jem n=ansible | ok: [localhost] => (item={'dir': 'documents'}) => {
+    "ansible_loop_var": "item",
+    "changed": false,
+    "diff": {
+        "after": {
+            "path": "/home/jem/documents"
+        },
+        "before": {
+            "path": "/home/jem/documents"
+        }
+    },
+    "gid": 1000,
+    "group": "jem",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": "jem",
+            "mode": 448,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": "jem",
+            "path": "/home/jem/documents",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "directory",
+            "unsafe_writes": false
+        }
+    },
+    "item": {
+        "dir": "documents"
+    },
+    "mode": "0700",
+    "owner": "jem",
+    "path": "/home/jem/documents",
+    "size": 18,
+    "state": "directory",
+    "uid": 1000
+}
+2022-12-26 22:46:05,962 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:05,964 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112765.9643106-28942-218268781618502 `" && echo ansible-tmp-1672112765.9643106-28942-218268781618502="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112765.9643106-28942-218268781618502 `" ) && sleep 0'
+2022-12-26 22:46:05,969 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/file.py
+2022-12-26 22:46:05,969 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpdgkqi4nl TO /home/jem/.ansible/tmp/ansible-tmp-1672112765.9643106-28942-218268781618502/AnsiballZ_file.py
+2022-12-26 22:46:05,969 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112765.9643106-28942-218268781618502/ /home/jem/.ansible/tmp/ansible-tmp-1672112765.9643106-28942-218268781618502/AnsiballZ_file.py && sleep 0'
+2022-12-26 22:46:05,973 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-vqwhzjrjgwaagnbklfuynnfbdmughumb ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112765.9643106-28942-218268781618502/AnsiballZ_file.py'"'"' && sleep 0'
+2022-12-26 22:46:06,057 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112765.9643106-28942-218268781618502/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:06,066 p=28355 u=jem n=ansible | ok: [localhost] => (item={'dir': 'documents/ISOs'}) => {
+    "ansible_loop_var": "item",
+    "changed": false,
+    "diff": {
+        "after": {
+            "path": "/home/jem/documents/ISOs"
+        },
+        "before": {
+            "path": "/home/jem/documents/ISOs"
+        }
+    },
+    "gid": 1000,
+    "group": "jem",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": "jem",
+            "mode": 448,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": "jem",
+            "path": "/home/jem/documents/ISOs",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "directory",
+            "unsafe_writes": false
+        }
+    },
+    "item": {
+        "dir": "documents/ISOs"
+    },
+    "mode": "0700",
+    "owner": "jem",
+    "path": "/home/jem/documents/ISOs",
+    "size": 6,
+    "state": "directory",
+    "uid": 1000
+}
+2022-12-26 22:46:06,066 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:06,068 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112766.0688393-28942-215392991639736 `" && echo ansible-tmp-1672112766.0688393-28942-215392991639736="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112766.0688393-28942-215392991639736 `" ) && sleep 0'
+2022-12-26 22:46:06,075 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/file.py
+2022-12-26 22:46:06,075 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpqkrzl0fn TO /home/jem/.ansible/tmp/ansible-tmp-1672112766.0688393-28942-215392991639736/AnsiballZ_file.py
+2022-12-26 22:46:06,075 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112766.0688393-28942-215392991639736/ /home/jem/.ansible/tmp/ansible-tmp-1672112766.0688393-28942-215392991639736/AnsiballZ_file.py && sleep 0'
+2022-12-26 22:46:06,079 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-epzrpbgxxqrrsodhdvgzfqjukwnurikv ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112766.0688393-28942-215392991639736/AnsiballZ_file.py'"'"' && sleep 0'
+2022-12-26 22:46:06,163 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112766.0688393-28942-215392991639736/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:06,172 p=28355 u=jem n=ansible | ok: [localhost] => (item={'dir': 'VMs'}) => {
+    "ansible_loop_var": "item",
+    "changed": false,
+    "diff": {
+        "after": {
+            "path": "/home/jem/VMs"
+        },
+        "before": {
+            "path": "/home/jem/VMs"
+        }
+    },
+    "gid": 1000,
+    "group": "jem",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": "jem",
+            "mode": 448,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": "jem",
+            "path": "/home/jem/VMs",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "directory",
+            "unsafe_writes": false
+        }
+    },
+    "item": {
+        "dir": "VMs"
+    },
+    "mode": "0700",
+    "owner": "jem",
+    "path": "/home/jem/VMs",
+    "size": 169,
+    "state": "directory",
+    "uid": 1000
+}
+2022-12-26 22:46:06,172 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:06,174 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112766.1744688-28942-209643241822583 `" && echo ansible-tmp-1672112766.1744688-28942-209643241822583="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112766.1744688-28942-209643241822583 `" ) && sleep 0'
+2022-12-26 22:46:06,179 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/file.py
+2022-12-26 22:46:06,179 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpferfzyp7 TO /home/jem/.ansible/tmp/ansible-tmp-1672112766.1744688-28942-209643241822583/AnsiballZ_file.py
+2022-12-26 22:46:06,179 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112766.1744688-28942-209643241822583/ /home/jem/.ansible/tmp/ansible-tmp-1672112766.1744688-28942-209643241822583/AnsiballZ_file.py && sleep 0'
+2022-12-26 22:46:06,183 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-phexxkphrwrtqycavrzhcvhzznomnbay ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112766.1744688-28942-209643241822583/AnsiballZ_file.py'"'"' && sleep 0'
+2022-12-26 22:46:06,266 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112766.1744688-28942-209643241822583/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:06,275 p=28355 u=jem n=ansible | ok: [localhost] => (item={'dir': 'wallpapers'}) => {
+    "ansible_loop_var": "item",
+    "changed": false,
+    "diff": {
+        "after": {
+            "path": "/home/jem/wallpapers"
+        },
+        "before": {
+            "path": "/home/jem/wallpapers"
+        }
+    },
+    "gid": 1000,
+    "group": "jem",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": "jem",
+            "mode": 448,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": "jem",
+            "path": "/home/jem/wallpapers",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "directory",
+            "unsafe_writes": false
+        }
+    },
+    "item": {
+        "dir": "wallpapers"
+    },
+    "mode": "0700",
+    "owner": "jem",
+    "path": "/home/jem/wallpapers",
+    "size": 24,
+    "state": "directory",
+    "uid": 1000
+}
+2022-12-26 22:46:06,276 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:06,277 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112766.277542-28942-2064123812946 `" && echo ansible-tmp-1672112766.277542-28942-2064123812946="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112766.277542-28942-2064123812946 `" ) && sleep 0'
+2022-12-26 22:46:06,283 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/file.py
+2022-12-26 22:46:06,283 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpl8y6gmtj TO /home/jem/.ansible/tmp/ansible-tmp-1672112766.277542-28942-2064123812946/AnsiballZ_file.py
+2022-12-26 22:46:06,283 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112766.277542-28942-2064123812946/ /home/jem/.ansible/tmp/ansible-tmp-1672112766.277542-28942-2064123812946/AnsiballZ_file.py && sleep 0'
+2022-12-26 22:46:06,286 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-xryfduibbxdrdewacyvpsnzfkpauslxh ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112766.277542-28942-2064123812946/AnsiballZ_file.py'"'"' && sleep 0'
+2022-12-26 22:46:06,370 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112766.277542-28942-2064123812946/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:06,376 p=28355 u=jem n=ansible | ok: [localhost] => (item={'dir': 'wallpapers/wallpapers'}) => {
+    "ansible_loop_var": "item",
+    "changed": false,
+    "diff": {
+        "after": {
+            "path": "/home/jem/wallpapers/wallpapers"
+        },
+        "before": {
+            "path": "/home/jem/wallpapers/wallpapers"
+        }
+    },
+    "gid": 1000,
+    "group": "jem",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": "jem",
+            "mode": 448,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": "jem",
+            "path": "/home/jem/wallpapers/wallpapers",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "directory",
+            "unsafe_writes": false
+        }
+    },
+    "item": {
+        "dir": "wallpapers/wallpapers"
+    },
+    "mode": "0700",
+    "owner": "jem",
+    "path": "/home/jem/wallpapers/wallpapers",
+    "size": 8192,
+    "state": "directory",
+    "uid": 1000
+}
+2022-12-26 22:46:06,382 p=28355 u=jem n=ansible | TASK [users | jem | copy personal config files] ****************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:06,394 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:06,395 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:06,398 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112766.398479-29094-68441814841323 `" && echo ansible-tmp-1672112766.398479-29094-68441814841323="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112766.398479-29094-68441814841323 `" ) && sleep 0'
+2022-12-26 22:46:06,404 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/stat.py
+2022-12-26 22:46:06,405 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmp2qlrftgk TO /home/jem/.ansible/tmp/ansible-tmp-1672112766.398479-29094-68441814841323/AnsiballZ_stat.py
+2022-12-26 22:46:06,405 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112766.398479-29094-68441814841323/ /home/jem/.ansible/tmp/ansible-tmp-1672112766.398479-29094-68441814841323/AnsiballZ_stat.py && sleep 0'
+2022-12-26 22:46:06,409 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-duzgxogsknzokedacuoooqnflqpgjydc ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112766.398479-29094-68441814841323/AnsiballZ_stat.py'"'"' && sleep 0'
+2022-12-26 22:46:06,495 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/file.py
+2022-12-26 22:46:06,495 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpa1nyiohn TO /home/jem/.ansible/tmp/ansible-tmp-1672112766.398479-29094-68441814841323/AnsiballZ_file.py
+2022-12-26 22:46:06,495 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112766.398479-29094-68441814841323/ /home/jem/.ansible/tmp/ansible-tmp-1672112766.398479-29094-68441814841323/AnsiballZ_file.py && sleep 0'
+2022-12-26 22:46:06,499 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-aubinrgjippussjbcwwcnwexdleotmld ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112766.398479-29094-68441814841323/AnsiballZ_file.py'"'"' && sleep 0'
+2022-12-26 22:46:06,582 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112766.398479-29094-68441814841323/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:06,594 p=28355 u=jem n=ansible | ok: [localhost] => (item={'src': 'wallpapers/0198.jpg', 'dest': 'wallpapers/wallpapers/0198.jpg'}) => {
+    "ansible_loop_var": "item",
+    "changed": false,
+    "checksum": "63a446d47eaa912dc162b9c55567b8d979a5066b",
+    "dest": "/home/jem/wallpapers/wallpapers/0198.jpg",
+    "diff": {
+        "after": {
+            "path": "/home/jem/wallpapers/wallpapers/0198.jpg"
+        },
+        "before": {
+            "path": "/home/jem/wallpapers/wallpapers/0198.jpg"
+        }
+    },
+    "gid": 1000,
+    "group": "jem",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": "0198.jpg",
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "dest": "/home/jem/wallpapers/wallpapers/0198.jpg",
+            "follow": true,
+            "force": false,
+            "group": "jem",
+            "mode": 384,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": "jem",
+            "path": "/home/jem/wallpapers/wallpapers/0198.jpg",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "file",
+            "unsafe_writes": false
+        }
+    },
+    "item": {
+        "dest": "wallpapers/wallpapers/0198.jpg",
+        "src": "wallpapers/0198.jpg"
+    },
+    "mode": "0600",
+    "owner": "jem",
+    "path": "/home/jem/wallpapers/wallpapers/0198.jpg",
+    "size": 353030,
+    "state": "file",
+    "uid": 1000
+}
+2022-12-26 22:46:06,594 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:06,596 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112766.596438-29094-66454976310922 `" && echo ansible-tmp-1672112766.596438-29094-66454976310922="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112766.596438-29094-66454976310922 `" ) && sleep 0'
+2022-12-26 22:46:06,602 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/stat.py
+2022-12-26 22:46:06,602 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmp_xlqxzuk TO /home/jem/.ansible/tmp/ansible-tmp-1672112766.596438-29094-66454976310922/AnsiballZ_stat.py
+2022-12-26 22:46:06,602 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112766.596438-29094-66454976310922/ /home/jem/.ansible/tmp/ansible-tmp-1672112766.596438-29094-66454976310922/AnsiballZ_stat.py && sleep 0'
+2022-12-26 22:46:06,606 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-pzvhzkkhbehpkddzsqzqjqyuphdezvfq ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112766.596438-29094-66454976310922/AnsiballZ_stat.py'"'"' && sleep 0'
+2022-12-26 22:46:06,706 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/file.py
+2022-12-26 22:46:06,706 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpu01c7io9 TO /home/jem/.ansible/tmp/ansible-tmp-1672112766.596438-29094-66454976310922/AnsiballZ_file.py
+2022-12-26 22:46:06,706 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112766.596438-29094-66454976310922/ /home/jem/.ansible/tmp/ansible-tmp-1672112766.596438-29094-66454976310922/AnsiballZ_file.py && sleep 0'
+2022-12-26 22:46:06,706 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-prfljbquqwihkyvxylhuywysseqgpnft ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112766.596438-29094-66454976310922/AnsiballZ_file.py'"'"' && sleep 0'
+2022-12-26 22:46:06,783 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112766.596438-29094-66454976310922/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:06,795 p=28355 u=jem n=ansible | ok: [localhost] => (item={'src': 'bashrc', 'dest': '.bashrc'}) => {
+    "ansible_loop_var": "item",
+    "changed": false,
+    "checksum": "b86a693a1092b64ab7238b3808c22c565052bf34",
+    "dest": "/home/jem/.bashrc",
+    "diff": {
+        "after": {
+            "path": "/home/jem/.bashrc"
+        },
+        "before": {
+            "path": "/home/jem/.bashrc"
+        }
+    },
+    "gid": 1000,
+    "group": "jem",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": "bashrc",
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "dest": "/home/jem/.bashrc",
+            "follow": true,
+            "force": false,
+            "group": "jem",
+            "mode": 384,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": "jem",
+            "path": "/home/jem/.bashrc",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "file",
+            "unsafe_writes": false
+        }
+    },
+    "item": {
+        "dest": ".bashrc",
+        "src": "bashrc"
+    },
+    "mode": "0600",
+    "owner": "jem",
+    "path": "/home/jem/.bashrc",
+    "size": 566,
+    "state": "file",
+    "uid": 1000
+}
+2022-12-26 22:46:06,795 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:06,797 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112766.797607-29094-2440646057214 `" && echo ansible-tmp-1672112766.797607-29094-2440646057214="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112766.797607-29094-2440646057214 `" ) && sleep 0'
+2022-12-26 22:46:06,803 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/stat.py
+2022-12-26 22:46:06,803 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmp2e7gt4x3 TO /home/jem/.ansible/tmp/ansible-tmp-1672112766.797607-29094-2440646057214/AnsiballZ_stat.py
+2022-12-26 22:46:06,804 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112766.797607-29094-2440646057214/ /home/jem/.ansible/tmp/ansible-tmp-1672112766.797607-29094-2440646057214/AnsiballZ_stat.py && sleep 0'
+2022-12-26 22:46:06,807 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-qqdipsrkijmxpxjeesxstwfigamejsjb ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112766.797607-29094-2440646057214/AnsiballZ_stat.py'"'"' && sleep 0'
+2022-12-26 22:46:06,893 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/file.py
+2022-12-26 22:46:06,893 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpnac8qnuj TO /home/jem/.ansible/tmp/ansible-tmp-1672112766.797607-29094-2440646057214/AnsiballZ_file.py
+2022-12-26 22:46:06,894 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112766.797607-29094-2440646057214/ /home/jem/.ansible/tmp/ansible-tmp-1672112766.797607-29094-2440646057214/AnsiballZ_file.py && sleep 0'
+2022-12-26 22:46:06,897 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-jjlccnadpttdswtzdyfxcioztphrdfhw ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112766.797607-29094-2440646057214/AnsiballZ_file.py'"'"' && sleep 0'
+2022-12-26 22:46:06,979 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112766.797607-29094-2440646057214/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:06,986 p=28355 u=jem n=ansible | ok: [localhost] => (item={'src': 'xprofile', 'dest': '.xprofile'}) => {
+    "ansible_loop_var": "item",
+    "changed": false,
+    "checksum": "1de33f1278070dcf392adefd2cb201b643e3aa48",
+    "dest": "/home/jem/.xprofile",
+    "diff": {
+        "after": {
+            "path": "/home/jem/.xprofile"
+        },
+        "before": {
+            "path": "/home/jem/.xprofile"
+        }
+    },
+    "gid": 1000,
+    "group": "jem",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": "xprofile",
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "dest": "/home/jem/.xprofile",
+            "follow": true,
+            "force": false,
+            "group": "jem",
+            "mode": 384,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": "jem",
+            "path": "/home/jem/.xprofile",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "file",
+            "unsafe_writes": false
+        }
+    },
+    "item": {
+        "dest": ".xprofile",
+        "src": "xprofile"
+    },
+    "mode": "0600",
+    "owner": "jem",
+    "path": "/home/jem/.xprofile",
+    "size": 228,
+    "state": "file",
+    "uid": 1000
+}
+2022-12-26 22:46:06,990 p=28355 u=jem n=ansible | TASK [software | all basic workstation-packages] ***************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:07,000 p=28355 u=jem n=ansible | redirecting (type: modules) ansible.builtin.pacman to community.general.pacman
+2022-12-26 22:46:07,000 p=28355 u=jem n=ansible | redirecting (type: modules) ansible.builtin.pacman to community.general.pacman
+2022-12-26 22:46:07,001 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:07,001 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:07,004 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112767.0043147-29162-25526120802907 `" && echo ansible-tmp-1672112767.0043147-29162-25526120802907="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112767.0043147-29162-25526120802907 `" ) && sleep 0'
+2022-12-26 22:46:07,009 p=28355 u=jem n=ansible | redirecting (type: modules) ansible.builtin.pacman to community.general.pacman
+2022-12-26 22:46:07,010 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible_collections/community/general/plugins/modules/pacman.py
+2022-12-26 22:46:07,010 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpt5iqm6qg TO /home/jem/.ansible/tmp/ansible-tmp-1672112767.0043147-29162-25526120802907/AnsiballZ_pacman.py
+2022-12-26 22:46:07,010 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112767.0043147-29162-25526120802907/ /home/jem/.ansible/tmp/ansible-tmp-1672112767.0043147-29162-25526120802907/AnsiballZ_pacman.py && sleep 0'
+2022-12-26 22:46:07,014 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-tvfmsaokzujmugklguozcbkcswlvshxk ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112767.0043147-29162-25526120802907/AnsiballZ_pacman.py'"'"' && sleep 0'
+2022-12-26 22:46:07,596 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112767.0043147-29162-25526120802907/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:07,602 p=28355 u=jem n=ansible | ok: [localhost] => {
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "executable": "pacman",
+            "extra_args": [],
+            "force": false,
+            "name": [
+                "chromium",
+                "cups",
+                "discord",
+                "feh",
+                "firefox",
+                "gawk",
+                "gimp",
+                "keychain",
+                "man-db",
+                "neovim",
+                "obs-studio",
+                "pcmanfm",
+                "reflector",
+                "traceroute",
+                "unclutter",
+                "vim"
+            ],
+            "reason": null,
+            "reason_for": "new",
+            "remove_nosave": false,
+            "state": "latest",
+            "update_cache": null,
+            "update_cache_extra_args": [],
+            "upgrade": null,
+            "upgrade_extra_args": []
+        }
+    },
+    "msg": "package(s) already installed",
+    "packages": []
+}
+2022-12-26 22:46:07,606 p=28355 u=jem n=ansible | TASK [software | download Hack nerdfont] ***********************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:07,615 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:07,616 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:07,619 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112767.61932-29186-166131185928717 `" && echo ansible-tmp-1672112767.61932-29186-166131185928717="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112767.61932-29186-166131185928717 `" ) && sleep 0'
+2022-12-26 22:46:07,696 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/get_url.py
+2022-12-26 22:46:07,696 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpnvzuhx4v TO /home/jem/.ansible/tmp/ansible-tmp-1672112767.61932-29186-166131185928717/AnsiballZ_get_url.py
+2022-12-26 22:46:07,697 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112767.61932-29186-166131185928717/ /home/jem/.ansible/tmp/ansible-tmp-1672112767.61932-29186-166131185928717/AnsiballZ_get_url.py && sleep 0'
+2022-12-26 22:46:07,700 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-pnsbruscnagdqfdjdjcpjkwfbbpalfdv ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112767.61932-29186-166131185928717/AnsiballZ_get_url.py'"'"' && sleep 0'
+2022-12-26 22:46:08,131 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112767.61932-29186-166131185928717/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:08,138 p=28355 u=jem n=ansible | ok: [localhost] => {
+    "changed": false,
+    "checksum_dest": "eab94e70abb4327a587156b719404b2534852888",
+    "checksum_src": "eab94e70abb4327a587156b719404b2534852888",
+    "dest": "/home/jem/Hack-v3.003-ttf.zip",
+    "elapsed": 0,
+    "gid": 1000,
+    "group": "jem",
+    "invocation": {
+        "module_args": {
+            "attributes": null,
+            "backup": false,
+            "checksum": "",
+            "ciphers": null,
+            "client_cert": null,
+            "client_key": null,
+            "decompress": true,
+            "dest": "/home/jem/",
+            "force": false,
+            "force_basic_auth": false,
+            "group": "jem",
+            "headers": null,
+            "http_agent": "ansible-httpget",
+            "mode": 493,
+            "owner": "jem",
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "timeout": 20,
+            "tmp_dest": null,
+            "unredirected_headers": [],
+            "unsafe_writes": false,
+            "url": "https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip",
+            "url_password": null,
+            "url_username": null,
+            "use_gssapi": false,
+            "use_netrc": true,
+            "use_proxy": true,
+            "validate_certs": true
+        }
+    },
+    "mode": "0755",
+    "msg": "OK (615776 bytes)",
+    "owner": "jem",
+    "size": 615776,
+    "src": "/home/jem/.ansible/tmp/ansible-tmp-1672112767.61932-29186-166131185928717/tmpoa5wy3tu",
+    "state": "file",
+    "uid": 1000,
+    "url": "https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip"
+}
+2022-12-26 22:46:08,142 p=28355 u=jem n=ansible | TASK [software | create folder for Hack nerdfont] **************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:08,152 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:08,152 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:08,155 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112768.1554365-29203-127454511688966 `" && echo ansible-tmp-1672112768.1554365-29203-127454511688966="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112768.1554365-29203-127454511688966 `" ) && sleep 0'
+2022-12-26 22:46:08,161 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/file.py
+2022-12-26 22:46:08,162 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmp2y643qr8 TO /home/jem/.ansible/tmp/ansible-tmp-1672112768.1554365-29203-127454511688966/AnsiballZ_file.py
+2022-12-26 22:46:08,162 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112768.1554365-29203-127454511688966/ /home/jem/.ansible/tmp/ansible-tmp-1672112768.1554365-29203-127454511688966/AnsiballZ_file.py && sleep 0'
+2022-12-26 22:46:08,165 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-vcneivzkxwxgldapisiemteqvdduzsag ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112768.1554365-29203-127454511688966/AnsiballZ_file.py'"'"' && sleep 0'
+2022-12-26 22:46:08,249 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112768.1554365-29203-127454511688966/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:08,255 p=28355 u=jem n=ansible | ok: [localhost] => {
+    "changed": false,
+    "diff": {
+        "after": {
+            "path": "/home/jem/Hack"
+        },
+        "before": {
+            "path": "/home/jem/Hack"
+        }
+    },
+    "gid": 1000,
+    "group": "jem",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": null,
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "follow": true,
+            "force": false,
+            "group": "jem",
+            "mode": 448,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": "jem",
+            "path": "/home/jem/Hack",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "directory",
+            "unsafe_writes": false
+        }
+    },
+    "mode": "0700",
+    "owner": "jem",
+    "path": "/home/jem/Hack",
+    "size": 6,
+    "state": "directory",
+    "uid": 1000
+}
+2022-12-26 22:46:08,259 p=28355 u=jem n=ansible | TASK [software | unzip Hack nerdfont] **************************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:08,267 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:08,267 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:08,270 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112768.2705474-29220-129451896658377 `" && echo ansible-tmp-1672112768.2705474-29220-129451896658377="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112768.2705474-29220-129451896658377 `" ) && sleep 0'
+2022-12-26 22:46:08,276 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/stat.py
+2022-12-26 22:46:08,276 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpoky77t8p TO /home/jem/.ansible/tmp/ansible-tmp-1672112768.2705474-29220-129451896658377/AnsiballZ_stat.py
+2022-12-26 22:46:08,276 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112768.2705474-29220-129451896658377/ /home/jem/.ansible/tmp/ansible-tmp-1672112768.2705474-29220-129451896658377/AnsiballZ_stat.py && sleep 0'
+2022-12-26 22:46:08,280 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-qctnjwihvfvilobozkjystcxfrrpxogg ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112768.2705474-29220-129451896658377/AnsiballZ_stat.py'"'"' && sleep 0'
+2022-12-26 22:46:08,444 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/unarchive.py
+2022-12-26 22:46:08,444 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpxg4oum5n TO /home/jem/.ansible/tmp/ansible-tmp-1672112768.2705474-29220-129451896658377/AnsiballZ_unarchive.py
+2022-12-26 22:46:08,444 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112768.2705474-29220-129451896658377/ /home/jem/.ansible/tmp/ansible-tmp-1672112768.2705474-29220-129451896658377/AnsiballZ_unarchive.py && sleep 0'
+2022-12-26 22:46:08,448 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-fswcibrpgcjrjuuygvisciaefasivzvq ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112768.2705474-29220-129451896658377/AnsiballZ_unarchive.py'"'"' && sleep 0'
+2022-12-26 22:46:08,581 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112768.2705474-29220-129451896658377/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:08,587 p=28355 u=jem n=ansible | changed: [localhost] => {
+    "changed": true,
+    "dest": "/home/jem/Hack",
+    "diff": {
+        "prepared": ">d++++++.?? ttf/\n>f++++++.?? ttf/Hack-Bold.ttf\n>f++++++.?? ttf/Hack-BoldItalic.ttf\n>f++++++.?? ttf/Hack-Italic.ttf\n>f++++++.?? ttf/Hack-Regular.ttf\n"
+    },
+    "gid": 1000,
+    "group": "jem",
+    "handler": "ZipArchive",
+    "invocation": {
+        "module_args": {
+            "attributes": null,
+            "copy": true,
+            "creates": null,
+            "decrypt": true,
+            "dest": "/home/jem/Hack",
+            "exclude": [],
+            "extra_opts": [],
+            "group": "jem",
+            "include": [],
+            "io_buffer_size": 65536,
+            "keep_newer": false,
+            "list_files": false,
+            "mode": 420,
+            "owner": "jem",
+            "remote_src": true,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": "/home/jem/Hack-v3.003-ttf.zip",
+            "unsafe_writes": false,
+            "validate_certs": true
+        }
+    },
+    "mode": "0700",
+    "owner": "jem",
+    "size": 6,
+    "src": "/home/jem/Hack-v3.003-ttf.zip",
+    "state": "directory",
+    "uid": 1000
+}
+2022-12-26 22:46:08,591 p=28355 u=jem n=ansible | TASK [software | move Hack nerdfont] ***************************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:08,598 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:08,598 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:08,602 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112768.6020465-29246-24326551171803 `" && echo ansible-tmp-1672112768.6020465-29246-24326551171803="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112768.6020465-29246-24326551171803 `" ) && sleep 0'
+2022-12-26 22:46:08,607 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112768.6020465-29246-24326551171803/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:08,612 p=28355 u=jem n=ansible | ok: [localhost] => {
+    "changed": false,
+    "dest": "/usr/share/fonts/",
+    "invocation": {
+        "dest": "/usr/share/fonts/",
+        "group": "root",
+        "mode": 420,
+        "module_args": {
+            "dest": "/usr/share/fonts/",
+            "group": "root",
+            "mode": 420,
+            "owner": "root",
+            "src": "/home/jem/Hack/"
+        },
+        "owner": "root",
+        "src": "/home/jem/Hack/"
+    },
+    "src": "/home/jem/Hack/"
+}
+2022-12-26 22:46:08,615 p=28355 u=jem n=ansible | TASK [software | alacritty] ************************************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:08,624 p=28355 u=jem n=ansible | redirecting (type: modules) ansible.builtin.pacman to community.general.pacman
+2022-12-26 22:46:08,624 p=28355 u=jem n=ansible | redirecting (type: modules) ansible.builtin.pacman to community.general.pacman
+2022-12-26 22:46:08,625 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:08,625 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:08,628 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112768.62829-29258-97263165598870 `" && echo ansible-tmp-1672112768.62829-29258-97263165598870="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112768.62829-29258-97263165598870 `" ) && sleep 0'
+2022-12-26 22:46:08,633 p=28355 u=jem n=ansible | redirecting (type: modules) ansible.builtin.pacman to community.general.pacman
+2022-12-26 22:46:08,634 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible_collections/community/general/plugins/modules/pacman.py
+2022-12-26 22:46:08,634 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmp1rl4oz4_ TO /home/jem/.ansible/tmp/ansible-tmp-1672112768.62829-29258-97263165598870/AnsiballZ_pacman.py
+2022-12-26 22:46:08,635 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112768.62829-29258-97263165598870/ /home/jem/.ansible/tmp/ansible-tmp-1672112768.62829-29258-97263165598870/AnsiballZ_pacman.py && sleep 0'
+2022-12-26 22:46:08,638 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-gynvcezyscedahshbcqtlvvrbgognzdp ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112768.62829-29258-97263165598870/AnsiballZ_pacman.py'"'"' && sleep 0'
+2022-12-26 22:46:09,214 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112768.62829-29258-97263165598870/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:09,221 p=28355 u=jem n=ansible | ok: [localhost] => {
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "executable": "pacman",
+            "extra_args": [],
+            "force": false,
+            "name": [
+                "alacritty"
+            ],
+            "reason": null,
+            "reason_for": "new",
+            "remove_nosave": false,
+            "state": "latest",
+            "update_cache": null,
+            "update_cache_extra_args": [],
+            "upgrade": null,
+            "upgrade_extra_args": []
+        }
+    },
+    "msg": "package(s) already installed",
+    "packages": []
+}
+2022-12-26 22:46:09,225 p=28355 u=jem n=ansible | TASK [software | alacrity | dotfile] ***************************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:09,237 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:09,237 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:09,240 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112769.2405415-29282-189754135047623 `" && echo ansible-tmp-1672112769.2405415-29282-189754135047623="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112769.2405415-29282-189754135047623 `" ) && sleep 0'
+2022-12-26 22:46:09,246 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/stat.py
+2022-12-26 22:46:09,247 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpzcet5f4f TO /home/jem/.ansible/tmp/ansible-tmp-1672112769.2405415-29282-189754135047623/AnsiballZ_stat.py
+2022-12-26 22:46:09,247 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112769.2405415-29282-189754135047623/ /home/jem/.ansible/tmp/ansible-tmp-1672112769.2405415-29282-189754135047623/AnsiballZ_stat.py && sleep 0'
+2022-12-26 22:46:09,250 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-kuljinuyiidpnqelyiuxpkbxrnfjupnq ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112769.2405415-29282-189754135047623/AnsiballZ_stat.py'"'"' && sleep 0'
+2022-12-26 22:46:09,336 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112769.2405415-29282-189754135047623/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:09,342 p=28355 u=jem n=ansible | changed: [localhost] => (item={'src': 'alacritty.yml', 'dest': 'alacritty.yml'}) => {
+    "ansible_loop_var": "item",
+    "changed": true,
+    "diff": [],
+    "invocation": {
+        "dest": "/home/jem/.config/alacritty/alacritty.yml",
+        "group": "jem",
+        "mode": 384,
+        "module_args": {
+            "dest": "/home/jem/.config/alacritty/alacritty.yml",
+            "group": "jem",
+            "mode": 384,
+            "owner": "jem",
+            "src": "files/alacritty.yml"
+        },
+        "owner": "jem",
+        "src": "files/alacritty.yml"
+    },
+    "item": {
+        "dest": "alacritty.yml",
+        "src": "alacritty.yml"
+    }
+}
+2022-12-26 22:46:09,347 p=28355 u=jem n=ansible | TASK [software | qtile] ****************************************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:09,356 p=28355 u=jem n=ansible | redirecting (type: modules) ansible.builtin.pacman to community.general.pacman
+2022-12-26 22:46:09,356 p=28355 u=jem n=ansible | redirecting (type: modules) ansible.builtin.pacman to community.general.pacman
+2022-12-26 22:46:09,357 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:09,357 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:09,360 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112769.360249-29301-89753574875223 `" && echo ansible-tmp-1672112769.360249-29301-89753574875223="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112769.360249-29301-89753574875223 `" ) && sleep 0'
+2022-12-26 22:46:09,365 p=28355 u=jem n=ansible | redirecting (type: modules) ansible.builtin.pacman to community.general.pacman
+2022-12-26 22:46:09,366 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible_collections/community/general/plugins/modules/pacman.py
+2022-12-26 22:46:09,366 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpre9sj_i6 TO /home/jem/.ansible/tmp/ansible-tmp-1672112769.360249-29301-89753574875223/AnsiballZ_pacman.py
+2022-12-26 22:46:09,366 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112769.360249-29301-89753574875223/ /home/jem/.ansible/tmp/ansible-tmp-1672112769.360249-29301-89753574875223/AnsiballZ_pacman.py && sleep 0'
+2022-12-26 22:46:09,369 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-xlcrlqbuetqcudislxadyhldvvmzjgbj ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112769.360249-29301-89753574875223/AnsiballZ_pacman.py'"'"' && sleep 0'
+2022-12-26 22:46:09,951 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112769.360249-29301-89753574875223/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:09,958 p=28355 u=jem n=ansible | ok: [localhost] => {
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "executable": "pacman",
+            "extra_args": [],
+            "force": false,
+            "name": [
+                "qtile"
+            ],
+            "reason": null,
+            "reason_for": "new",
+            "remove_nosave": false,
+            "state": "latest",
+            "update_cache": null,
+            "update_cache_extra_args": [],
+            "upgrade": null,
+            "upgrade_extra_args": []
+        }
+    },
+    "msg": "package(s) already installed",
+    "packages": []
+}
+2022-12-26 22:46:09,961 p=28355 u=jem n=ansible | TASK [software | alacrity | dotfile] ***************************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:09,974 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:09,974 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:09,978 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112769.97785-29325-94760330747521 `" && echo ansible-tmp-1672112769.97785-29325-94760330747521="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112769.97785-29325-94760330747521 `" ) && sleep 0'
+2022-12-26 22:46:09,983 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/stat.py
+2022-12-26 22:46:09,983 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpi6p4cw_6 TO /home/jem/.ansible/tmp/ansible-tmp-1672112769.97785-29325-94760330747521/AnsiballZ_stat.py
+2022-12-26 22:46:09,984 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112769.97785-29325-94760330747521/ /home/jem/.ansible/tmp/ansible-tmp-1672112769.97785-29325-94760330747521/AnsiballZ_stat.py && sleep 0'
+2022-12-26 22:46:09,987 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-kidmhycpeosjgwevtnyakkjouqtgsoot ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112769.97785-29325-94760330747521/AnsiballZ_stat.py'"'"' && sleep 0'
+2022-12-26 22:46:10,075 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/file.py
+2022-12-26 22:46:10,075 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpqb1573fw TO /home/jem/.ansible/tmp/ansible-tmp-1672112769.97785-29325-94760330747521/AnsiballZ_file.py
+2022-12-26 22:46:10,075 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112769.97785-29325-94760330747521/ /home/jem/.ansible/tmp/ansible-tmp-1672112769.97785-29325-94760330747521/AnsiballZ_file.py && sleep 0'
+2022-12-26 22:46:10,080 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-atxnivfvcvzcwpnegfbvvlamvtoeefwy ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112769.97785-29325-94760330747521/AnsiballZ_file.py'"'"' && sleep 0'
+2022-12-26 22:46:10,162 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112769.97785-29325-94760330747521/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:10,169 p=28355 u=jem n=ansible | ok: [localhost] => (item={'src': 'config.py', 'dest': 'config.py'}) => {
+    "ansible_loop_var": "item",
+    "changed": false,
+    "checksum": "5ade094471059190f37c73d63247bb50632ed9c0",
+    "dest": "/home/jem/.config/qtile/config.py",
+    "diff": {
+        "after": {
+            "path": "/home/jem/.config/qtile/config.py"
+        },
+        "before": {
+            "path": "/home/jem/.config/qtile/config.py"
+        }
+    },
+    "gid": 1000,
+    "group": "jem",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": "config.py",
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "dest": "/home/jem/.config/qtile/config.py",
+            "follow": true,
+            "force": false,
+            "group": "jem",
+            "mode": 384,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": "jem",
+            "path": "/home/jem/.config/qtile/config.py",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "file",
+            "unsafe_writes": false
+        }
+    },
+    "item": {
+        "dest": "config.py",
+        "src": "config.py"
+    },
+    "mode": "0600",
+    "owner": "jem",
+    "path": "/home/jem/.config/qtile/config.py",
+    "size": 8914,
+    "state": "file",
+    "uid": 1000
+}
+2022-12-26 22:46:10,187 p=28355 u=jem n=ansible | PLAY [localhost] ***********************************************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:10,192 p=28355 u=jem n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:10,198 p=28355 u=jem n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jem
+2022-12-26 22:46:10,198 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~jem && sleep 0'
+2022-12-26 22:46:10,202 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jem/.ansible/tmp `"&& mkdir "` echo /home/jem/.ansible/tmp/ansible-tmp-1672112770.202089-29350-200635772150596 `" && echo ansible-tmp-1672112770.202089-29350-200635772150596="` echo /home/jem/.ansible/tmp/ansible-tmp-1672112770.202089-29350-200635772150596 `" ) && sleep 0'
+2022-12-26 22:46:10,207 p=28355 u=jem n=ansible | Using module file /usr/lib/python3.10/site-packages/ansible/modules/setup.py
+2022-12-26 22:46:10,208 p=28355 u=jem n=ansible | <127.0.0.1> PUT /home/jem/.ansible/tmp/ansible-local-28355dqdq1csk/tmpe_91mizu TO /home/jem/.ansible/tmp/ansible-tmp-1672112770.202089-29350-200635772150596/AnsiballZ_setup.py
+2022-12-26 22:46:10,208 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jem/.ansible/tmp/ansible-tmp-1672112770.202089-29350-200635772150596/ /home/jem/.ansible/tmp/ansible-tmp-1672112770.202089-29350-200635772150596/AnsiballZ_setup.py && sleep 0'
+2022-12-26 22:46:10,211 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-qzycrvahnjeuwuvleomxbgvdocgodect ; /usr/bin/python /home/jem/.ansible/tmp/ansible-tmp-1672112770.202089-29350-200635772150596/AnsiballZ_setup.py'"'"' && sleep 0'
+2022-12-26 22:46:10,798 p=28355 u=jem n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/jem/.ansible/tmp/ansible-tmp-1672112770.202089-29350-200635772150596/ > /dev/null 2>&1 && sleep 0'
+2022-12-26 22:46:10,810 p=28355 u=jem n=ansible | ok: [localhost]
+2022-12-26 22:46:10,818 p=28355 u=jem n=ansible | TASK [include_tasks] *******************************************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:10,825 p=28355 u=jem n=ansible | skipping: [localhost] => {
+    "changed": false,
+    "skip_reason": "Conditional result was False"
+}
+2022-12-26 22:46:10,835 p=28355 u=jem n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************************************************************************
+2022-12-26 22:46:10,835 p=28355 u=jem n=ansible | localhost                  : ok=35   changed=2    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
