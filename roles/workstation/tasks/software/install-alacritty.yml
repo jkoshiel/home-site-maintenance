@@ -36,6 +36,7 @@
     owner: jem
     group: jem
     mode: 0700
+    remote_src: yes
 
 - name: software | move Hack nerdfont
   copy:
