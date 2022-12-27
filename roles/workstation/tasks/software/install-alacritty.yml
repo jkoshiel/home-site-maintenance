@@ -16,7 +16,7 @@
     state: directory
     owner: jem
     group: jem
-    mode: 0700
+    mode: 0755
   when:
     - ansible_distribution == "Archlinux"
 
@@ -26,7 +26,7 @@
     dest: /home/jem/Hack/
     owner: jem
     group: jem
-    mode: 0644
+    mode: 0755
     remote_src: yes
       
 - name: software | create Hack folder in usr share
@@ -35,7 +35,7 @@
     state: directory
     owner: root
     group: root
-    mode: 0744
+    mode: 0755
   when:
     - ansible_distribution == "Archlinux"
 
@@ -45,7 +45,7 @@
     dest: /usr/share/fonts/Hack
     owner: root
     group: root
-    mode: 0744
+    mode: 0755
     remote_src: yes
 
 - name: software | alacritty
