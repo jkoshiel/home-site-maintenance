@@ -32,7 +32,7 @@
 - name: software | move Hack nerdfont
   copy:
     src: /home/jem/ttf/
-    dest: /home/jem/Hack/
+    dest: /home/jem/Hack
     owner: jem
     group: jem
     mode: 0700
