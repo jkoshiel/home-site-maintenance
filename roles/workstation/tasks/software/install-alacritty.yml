@@ -38,13 +38,23 @@
     mode: 0700
     remote_src: yes
 
+- name: software | create Hack folder in usr share
+  file:
+    path: /usr/share/fots/Hack
+    stae: directory
+    owner: root
+    group: root
+    mode: 0744
+  when:
+    - ansible_distribution == "Archlinux"
+
 - name: software | move Hack nerdfont to usr share
   copy:
     src: /home/jem/Hack/
-    dest: /usr/share/fonts/
+    dest: /usr/share/fonts/Hack
     owner: root
     group: root
-    mode: 0644
+    mode: 0744
     remote_src: yes
 
 - name: software | alacritty
