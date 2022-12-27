@@ -1,3 +1,41 @@
+- name: software | download Hack nerdfont
+  tags: nerdfont,Hack
+  get_url:
+    url: https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip
+    dest: /home/jem/
+    group: jem
+    owner: jem
+    mode: 0755
+    timeout: 20
+  when:
+    - ansible_distribution == "Archlinux"
+
+- name: software | create folder for Hack nerdfont
+  file:
+    path: /home/jem/Hack
+    state: directory
+    owner: jem
+    group: jem
+    mode: 0700
+  when:
+    - ansible_distribution == "Archlinux"
+  
+- name: software | unzip Hack nerdfont
+  unarchive:
+    src: /home/jem/Hack-v3.003-ttf.zip
+    dest: /home/jem/Hack
+    owner: jem
+    group: jem
+    mode: 0644
+
+- name: software | move Hack nerdfont
+  copy:
+    src: /home/jem/Hack/
+    dest: /usr/share/fonts/
+    owner: root
+    group: root
+    mode: 0644
+
 - name: software | alacritty
   tags: packages,workstation-packages,alacritty
   package:
@@ -15,7 +53,7 @@
     group: jem
     mode: 0600
   with_items:
-    - { src: 'alacritty.yml', dest: 'alarcritty.yml' }
+    - { src: 'alacritty.yml', dest: 'alacritty.yml' }
   when:
     - ansible_distribution == "Archlinux"
 
