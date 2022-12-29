@@ -10,25 +10,16 @@
   when:
     - ansible_distribution == "Archlinux"
 
-- name: software | create new folder
-  file:
-    path: /home/jem/Hack
-    state: directory
-    owner: jem
-    group: jem
-    mode: 0755
-  when:
-    - ansible_distribution == "Archlinux"
-
-- name: software | unzip Hack nerdfont
-  unarchive:
-    src: /home/jem/Hack.zip
-    dest: /home/jem/Hack/
-    owner: jem
-    group: jem
-    mode: 0755
-    remote_src: yes
-      
+# - name: software | create new folder
+#   file:
+#     path: /home/jem/Hack
+#     state: directory
+#     owner: jem
+#     group: jem
+#     mode: 0755
+#   when:
+#     - ansible_distribution == "Archlinux"
+# 
 - name: software | create Hack folder in usr share
   file:
     path: /usr/share/fonts/Hack
@@ -39,15 +30,27 @@
   when:
     - ansible_distribution == "Archlinux"
 
-- name: software | move Hack nerdfont to usr share
-  copy:
-    src: /home/jem/Hack/
-    dest: /usr/share/fonts/Hack
-    owner: root
-    group: root
+- name: software | unzip Hack nerdfont
+  unarchive:
+    src: /home/jem/Hack.zip
+#    dest: /home/jem/Hack/
+    dest: /usr/share/fonts/Hack/
+    owner: jem
+    group: jem
     mode: 0755
     remote_src: yes
 
+- name: software | relaod fonts
+  command: fc-cache -f -v
+# - name: software | move Hack nerdfont to usr share
+#   copy:
+#     src: /home/jem/Hack/
+#     dest: /usr/share/fonts/Hack
+#     owner: root
+#     group: root
+#     mode: 0755
+#     remote_src: yes
+# 
 - name: software | alacritty
   tags: packages,workstation-packages,alacritty
   package:
