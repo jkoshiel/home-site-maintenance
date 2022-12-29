@@ -1,4 +1,4 @@
-- name: software | sddm
+- name: software | sddm | install
   tags: packages,workstation-packages,sddm
   package:
     name: sddm
@@ -6,12 +6,21 @@
   when:
     - ansible_distribution == "Archlinux"
 
-- name: software | sddm | enable sddm and install sugar-candy
+- name: software | sddm | enable
   tags: packages,workstation-packages,sddm
-  become: true
-  shell: |
-    systemctl enable sddm
-    tar -xzvf ~/sugar-candy.tar.gz -C /usr/share/sddm/themes/  
+  command: systemctl enable sddm
+  when:
+    - ansible_distribution == "Archlinux"
+
+- name: software | sddm | get sugar-candy theme
+  get_url:
+    url: "https://framagit.org/MarianArlt/sddm-sugar-candy/-/archive/master/sddm-sugar-candy-master.tar.gz"
+    dest: ~/sugar_candy.tar.gz
+  when:
+    - ansible_distribution == "Archlinux"
+
+- name: software | sddm | install sugar-candy theme
+  command: tar -xzvf ~/sugar-candy.tar.gz -C /usr/share/sddm/themes/  
   when:
     - ansible_distribution == "Archlinux"
 
@@ -28,5 +37,4 @@
     - { src: 'sddm.conf', dest: '/etc/sddm.conf' }
   when:
     - ansible_distribution == "Archlinux"
-
 
