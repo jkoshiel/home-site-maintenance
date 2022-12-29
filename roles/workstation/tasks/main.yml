@@ -8,5 +8,6 @@
 
   ## install software
   - import_tasks: software/basics.yml
+  - import_tasks: software/hack-nerd-font.yml
   - import_tasks: software/install-alacritty.yml
   - import_tasks: software/qtile.yml

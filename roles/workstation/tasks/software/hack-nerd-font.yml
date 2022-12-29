@@ -1,0 +1,38 @@
+- name: software | download Hack nerdfont
+  tags: nerdfont,Hack
+  get_url:
+    url: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/Hack.zip
+    dest: /home/jem/
+    group: jem
+    owner: jem
+    mode: 0755
+    timeout: 20
+  when:
+    - ansible_distribution == "Archlinux"
+
+- name: software | create Hack folder in usr share
+  file:
+    path: /usr/share/fonts/Hack
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+  when:
+    - ansible_distribution == "Archlinux"
+
+- name: software | unzip Hack nerdfont
+  unarchive:
+    src: /home/jem/Hack.zip
+    dest: /usr/share/fonts/Hack/
+    owner: jem
+    group: jem
+    mode: 0755
+    remote_src: yes
+  when:
+    - ansible_distribution == "Archlinux"
+
+- name: software | reload fonts
+  command: fc-cache -f -v
+  when:
+    - ansible_distribution == "Archlinux"
+
