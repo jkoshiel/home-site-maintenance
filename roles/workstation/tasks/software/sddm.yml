@@ -33,8 +33,9 @@
     group: root
     mode: 0644
   with_items:
-    - { src: '0240.jpg', dest: '/usr/share/sddm/themes/sugar-candy/Backgrounds/0240.jpg' }
+    - { src: '0240.jpg', dest: '/usr/share/sddm/themes/sddm-sugar-candy-master/Backgrounds/0240.jpg' }
     - { src: 'sddm.conf', dest: '/etc/sddm.conf' }
+    - { src: 'theme.conf', dest: '/usr/share/sddm/themes/sddm-sugar-candy-master/theme.conf' }
   when:
     - ansible_distribution == "Archlinux"
 
