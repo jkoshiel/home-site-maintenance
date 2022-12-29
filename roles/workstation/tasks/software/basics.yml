@@ -14,7 +14,9 @@
       - neovim
       - obs-studio
       - pcmanfm
+      - pipewire
       - reflector
+      - tar
       - traceroute
       - unclutter
       - vim

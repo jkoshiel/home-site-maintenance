@@ -1,0 +1,32 @@
+- name: software | sddm
+  tags: packages,workstation-packages,sddm
+  package:
+    name: sddm
+    state: latest
+  when:
+    - ansible_distribution == "Archlinux"
+
+- name: software | sddm | enable sddm and install sugar-candy
+  tags: packages,workstation-packages,sddm
+  become: true
+  shell: |
+    systemctl enable sddm
+    tar -xzvf ~/sugar-candy.tar.gz -C /usr/share/sddm/themes/  
+  when:
+    - ansible_distribution == "Archlinux"
+
+- name: software | sddm | install background image and config file
+  tags: workstation-packages,sddm,workstation-packages
+  copy:
+    src: files/sddm/{{ item.src }}
+    dest: "{{ item.dest }}"
+    owner: root
+    group: root
+    mode: 0644
+  with_items:
+    - { src: '0240.jpg', dest: '/usr/share/sddm/themes/sugar-candy/Backgrounds/0240.jpg' }
+    - { src: 'sddm.conf', dest: '/etc/sddm.conf' }
+  when:
+    - ansible_distribution == "Archlinux"
+
+
