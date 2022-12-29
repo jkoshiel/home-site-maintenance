@@ -11,11 +11,17 @@
       - gimp
       - keychain
       - man-db
+      - make
       - neovim
+      - nodejs
+      - npm
       - obs-studio
       - pcmanfm
       - pipewire
+      - python
+      - python-pip
       - reflector
+      - rust
       - tar
       - traceroute
       - unclutter
