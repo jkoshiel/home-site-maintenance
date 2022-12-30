@@ -13,3 +13,4 @@
   - import_tasks: software/install-alacritty.yml
   - import_tasks: software/qtile.yml
   - import_tasks: software/qutebrowser.yml
+  - import_tasks: software/virt-manager.yml

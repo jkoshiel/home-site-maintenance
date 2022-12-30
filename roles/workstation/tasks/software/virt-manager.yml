@@ -1,0 +1,55 @@
+- name: software | virt-manager packages | install
+  tags: packages,workstation-packages,virt-manager
+  package:
+    name:
+      - qemu
+      - virt-manager
+    state: latest
+  when:
+    - ansible_distribution == "Archlinux"
+
+- name: software | ebtables from AUR | install
+  tags: packages,workstation-packages,virt-manager
+  become: true
+  shell: |
+    aura -A ebtables
+    systemctl enable --now libvirtd
+    usermod -G libvirtd -a jem
+
+
+    
+
+#- name: software | virt-manager | enable
+#   tags: packages,workstation-packages,virt-manager
+#   command: systemctl enable virt-manager
+#   when:
+#     - ansible_distribution == "Archlinux"
+# 
+# - name: software | virt-manager | get sugar-candy theme
+#   get_url:
+#     url: "https://downloads.sourceforge.net/ebtables/ebtables-v2.0.10-4.tar.gz"
+#     dest: /home/jem/ebtables-v2.0.10-4.tar.gz
+#   when:
+#     - ansible_distribution == "Archlinux"
+ 
+#this isn't going ot work as is. fix it
+# - name: software | virt-manager | install sugar-candy theme
+#   command: tar -xzvf /home/jem/sugar-candy.tar.gz -C /usr/share/virt-manager/themes/
+#   when:
+#     - ansible_distribution == "Archlinux"
+# 
+# - name: software | virt-manager | install background image and config file
+#   tags: workstation-packages,virt-manager,workstation-packages
+#   copy:
+#     src: files/virt-manager/{{ item.src }}
+#     dest: "{{ item.dest }}"
+#     owner: root
+#     group: root
+#     mode: 0644
+#   with_items:
+#     - { src: '0240.jpg', dest: '/usr/share/virt-manager/themes/virt-manager-sugar-candy-master/Backgrounds/0240.jpg' }
+#     - { src: 'virt-manager.conf', dest: '/etc/virt-manager.conf' }
+#     - { src: 'theme.conf', dest: '/usr/share/virt-manager/themes/virt-manager-sugar-candy-master/theme.conf' }
+#   when:
+#     - ansible_distribution == "Archlinux"
+# 
