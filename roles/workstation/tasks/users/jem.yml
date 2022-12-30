@@ -49,3 +49,4 @@
     mode: 0644
   with_items: 
     - { src: 'xorg.conf', dest: 'xorg.conf' }
+  when: ansible_hostname == "ArchDesktop"

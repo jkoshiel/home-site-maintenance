@@ -1,0 +1,22 @@
+- name: software | qutebrowser
+  tags: packages,workstation-packages,qutebrowser
+  package:
+    name: qutebrowser
+    state: latest
+  when:
+    - ansible_distribution == "Archlinux"
+
+- name: software | alacrity | dotfile
+  tags: workstation-packages,qutebrowser,workstation-packages
+  copy:
+    src: files/qutebrowser/{{ item.src }}
+    dest: /home/jem/.config/qutebrowser/{{ item.dest }}
+    owner: jem
+    group: jem
+    mode: 0600
+  with_items:
+    - { src: 'config.py', dest: 'config.py' }
+  when:
+    - ansible_distribution == "Archlinux"
+
+

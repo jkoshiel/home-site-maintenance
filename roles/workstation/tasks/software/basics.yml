@@ -12,6 +12,7 @@
       - keychain
       - man-db
       - make
+      - mpv
       - neovim
       - nodejs
       - npm
