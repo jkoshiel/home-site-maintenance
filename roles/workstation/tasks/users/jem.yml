@@ -22,9 +22,17 @@
     - {dir: .keychain }
     - {dir: documents }
     - {dir: documents/ISOs }
+    - {dir: downloads }
     - {dir: VMs }
     - {dir: wallpapers }
     - {dir: wallpapers/wallpapers }
+
+- name: users | jem | move Documents to documents
+  tags: jem,settings,users,dotfiles
+  command: mv {{ item.src }} {{ item.dest }}
+  with_items:
+    - { src: '/home/jem/Documents/*', dest: '/home/jem/documents/' }
+    - { src: '/home/jem/Downloads/*', dest: '/home/jem/downloads/' }
 
 - name: users | jem | copy personal config files
   tags: jem,dotfiles,users

@@ -33,13 +33,3 @@
   when:
     - ansible_distribution == "Archlinux"
 
-# - name: software | install paru AUR helper
-#   tages: packages,workstation-packages,AUR
-#   shell: |
-#     cd /home/jem
-#     sudo pacman -S --needed base-devel
-#     git clone https://aur.archlinux.org/paru.git
-#     cd paru
-#     makepkg -si
-#   when:
-#     - ansible_distribution == "Archlinux"
