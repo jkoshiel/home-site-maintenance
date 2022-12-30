@@ -4,6 +4,7 @@
     name:
       - qemu
       - virt-manager
+      - libvirt
     state: latest
   when:
     - ansible_distribution == "Archlinux"
@@ -12,7 +13,6 @@
   tags: packages,workstation-packages,virt-manager
   become: true
   shell: |
-    aura -A ebtables
     systemctl enable --now libvirtd
     usermod -G libvirtd -a jem
 
