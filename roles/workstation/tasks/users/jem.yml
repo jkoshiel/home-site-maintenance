@@ -29,10 +29,13 @@
 
 - name: users | jem | move Documents to documents
   tags: jem,settings,users,dotfiles
-  command: mv {{ item.src }} {{ item.dest }}
+  synchronize:
+    owner: true
+    src: /home/jem/{{ item.src }}
+    dest: /home/jem/{{ item.dest }}
   with_items:
-    - { src: '/home/jem/Documents/*', dest: '/home/jem/documents/' }
-    - { src: '/home/jem/Downloads/*', dest: '/home/jem/downloads/' }
+    - { src: 'Documents', dest: 'documents/' }
+    - { src: 'Downloads', dest: 'downloads/' }
 
 - name: users | jem | copy personal config files
   tags: jem,dotfiles,users
