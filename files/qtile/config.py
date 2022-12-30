@@ -31,6 +31,7 @@ from libqtile.utils import guess_terminal
 
 mod = "mod4"
 terminal = "alacritty"
+myBrowser = "qutebrowser"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -60,17 +61,18 @@ keys = [
     # multiple stack panes
     Key(
         [mod, "shift"],
-        "Return",
+        "p",
         lazy.layout.toggle_split(),
         desc="Toggle between split and unsplit sides of stack",
     ),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
+    Key([mod], "b", lazy.spawn(myBrowser), desc="Launch browser"),
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-    Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    Key([mod, "shift"], "Return", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
 
     # audio player controls
     # Key([], "XF86AudioNext", lazy.spawn("mpc next")),
@@ -106,6 +108,12 @@ for i in groups:
                 i.name,
                 lazy.window.togroup(i.name, switch_group=True),
                 desc="Switch to & move focused window to group {}".format(i.name),
+            ),
+            Key(
+                [mod, "control"],
+                i.name,
+                lazy.window.togroup(i.name),
+                desc="Move focused window to group {}".format(i.name),
             ),
             # Or, use below if you prefer not to switch to that group.
             # # mod1 + shift + letter of group = move focused window to group

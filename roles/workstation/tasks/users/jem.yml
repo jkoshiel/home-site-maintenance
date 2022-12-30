@@ -39,3 +39,13 @@
     - { src: 'bashrc', dest: '.bashrc' }
     - { src: 'xprofile', dest: '.xprofile' }
 
+- name: users | jem | copy triple monitor config
+  tags: jem,dotfiles,users
+  copy:
+    src: files/{{ item.src }}
+    dest: /etc/X11/{{ item.dest }}
+    owner: root
+    group: root
+    mode: 0644
+  with_items: 
+    - { src: 'xorg.conf', dest: 'xorg.conf' }
