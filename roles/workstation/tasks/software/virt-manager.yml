@@ -2,9 +2,10 @@
   tags: packages,workstation-packages,virt-manager
   package:
     name:
-      - qemu-base
+      - qemu
       - virt-manager
       - libvirt
+      - iptables-nft
     state: latest
   when:
     - ansible_distribution == "Archlinux"
@@ -14,7 +15,7 @@
   become: true
   shell: |
     systemctl enable --now libvirtd
-    usermod -G libvirtd -a jem
+    usermod -G libvirt -a jem
 
 
     
