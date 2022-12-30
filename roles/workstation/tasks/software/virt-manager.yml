@@ -2,14 +2,14 @@
   tags: packages,workstation-packages,virt-manager
   package:
     name:
-      - libvirt
-      - qemu
+      - qemu-base
       - virt-manager
+      - libvirt
     state: latest
   when:
     - ansible_distribution == "Archlinux"
 
-- name: software | ebtables from AUR | install
+- name: software | enable libvirt 
   tags: packages,workstation-packages,virt-manager
   become: true
   shell: |
