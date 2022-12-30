@@ -1,11 +1,3 @@
-- name: users | jem | remove unwanted stuff from home directory
-  file:
-    path: /home/jem/{{ item }}
-    state: absent
-  with_items:
-    - Public
-    - Templates
-
 - name: users | jem | create personal config directories
   tags: jem,settings,users,dotfiles
   file:
@@ -34,8 +26,21 @@
     src: /home/jem/{{ item.src }}
     dest: /home/jem/{{ item.dest }}
   with_items:
-    - { src: 'Documents', dest: 'documents/' }
-    - { src: 'Downloads', dest: 'downloads/' }
+    - { src: 'Documents', dest: 'documents' }
+    - { src: 'Downloads', dest: 'downloads' }
+
+- name: users | jem | remove unwanted stuff from home directory
+  file:
+    path: /home/jem/{{ item }}
+    state: absent
+  with_items:
+    - Public
+    - Templates
+    - Desktop
+    - Documents
+    - Downloads
+    - Music
+    - Videos
 
 - name: users | jem | copy personal config files
   tags: jem,dotfiles,users
