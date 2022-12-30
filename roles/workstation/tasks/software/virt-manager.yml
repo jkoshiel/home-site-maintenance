@@ -2,9 +2,9 @@
   tags: packages,workstation-packages,virt-manager
   package:
     name:
+      - libvirt
       - qemu
       - virt-manager
-      - libvirt
     state: latest
   when:
     - ansible_distribution == "Archlinux"
