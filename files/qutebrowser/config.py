@@ -2119,7 +2119,7 @@ c.colors.webpage.preferred_color_scheme = 'dark'
 # c.zoom.text_only = False
 
 ## Bindings for normal mode
-config.bind('M', 'hint links spawn mpv {hint-url}')
+config.bind('M', 'hint links spawn mpv --hwdec=auto --cache-secs=5 {hint-url}')
 # config.bind("'", 'mode-enter jump_mark')
 # config.bind('+', 'zoom-in')
 # config.bind('-', 'zoom-out')
