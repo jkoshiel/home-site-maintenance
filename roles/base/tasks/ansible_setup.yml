@@ -7,6 +7,7 @@
 - name: ansible setup | create ansible log file
   tags: ansible,ansible-setup
   become: true
+  become_user: rosie
   file:
     path: ~/.ansible/ansible.log
     mode: 0664
