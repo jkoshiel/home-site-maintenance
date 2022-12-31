@@ -20,7 +20,12 @@
     - {dir: wallpapers }
     - {dir: wallpapers/wallpapers }
 
-- name: users | jem | move Documents to documents
+- name: users | jem | check if old user folders exist
+  stat:
+    path: /home/jem/Documents/
+  register: old_folders
+
+- name: users | jem | move files to new user folders
   tags: jem,settings,users,dotfiles
   synchronize:
     owner: true
@@ -29,6 +34,7 @@
   with_items:
     - { src: 'Documents', dest: 'documents' }
     - { src: 'Downloads', dest: 'downloads' }
+  when: old_folders.stat.exists
   ignore_errors: true
 
 - name: users | jem | remove unwanted stuff from home directory
