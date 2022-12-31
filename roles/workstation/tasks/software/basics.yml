@@ -39,8 +39,3 @@
     ansible-galaxy collection build --force
     ansible-galaxy collection install --force "./kewlfft-aur-$(cat galaxy.yml | grep version: | awk '{print $2}').tar.gz"
 
-- name: software | install paru
-  aur:
-    name: paru
-    use: makepkg
-    state: present

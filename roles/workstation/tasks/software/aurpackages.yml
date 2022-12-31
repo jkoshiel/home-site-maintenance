@@ -1,0 +1,7 @@
+- name: software | install paru
+  aur:
+    name: paru
+    use: makepkg
+    state: present
+  when:
+    - ansible_distribution == "Archlinux"
