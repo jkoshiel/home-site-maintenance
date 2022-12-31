@@ -41,6 +41,7 @@
   become_user: rosie
 
 - name: software | install paru
+  become: false
   kewlfft.aur.aur:
     name: paru
     use: makepkg
