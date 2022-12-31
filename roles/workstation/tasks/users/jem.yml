@@ -15,6 +15,7 @@
     - {dir: documents }
     - {dir: documents/ISOs }
     - {dir: downloads }
+    - {dir: repos }
     - {dir: VMs }
     - {dir: wallpapers }
     - {dir: wallpapers/wallpapers }
@@ -51,7 +52,7 @@
     group: jem
     mode: 0600
   with_items: 
-    - { src: 'wallpapers', dest: 'wallpapers/wallpapers/' }
+    - { src: 'wallpapers', dest: 'wallpapers/' }
     - { src: 'bashrc', dest: '.bashrc' }
     - { src: 'xprofile', dest: '.xprofile' }
 
