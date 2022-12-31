@@ -29,6 +29,7 @@
   with_items:
     - { src: 'Documents', dest: 'documents' }
     - { src: 'Downloads', dest: 'downloads' }
+  ignore_errors: true
 
 - name: users | jem | remove unwanted stuff from home directory
   file:
