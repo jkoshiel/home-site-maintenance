@@ -3,5 +3,7 @@
     name: paru
     use: makepkg
     state: present
+  become: false
+  become_user: rosie
   when:
     - ansible_distribution == "Archlinux"
