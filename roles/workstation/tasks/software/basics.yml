@@ -40,10 +40,10 @@
   become: yes
   become_user: rosie
 
-- name: software | install paru
-  kewlfft.aur.aur:
-    name: paru
-    use: makepkg
-    state: present
-  when:
-    - ansible_distribution == "Archlinux"
+#- name: software | install paru
+#  kewlfft.aur.aur:
+#    name: paru
+#    use: makepkg
+#    state: present
+#  when:
+#    - ansible_distribution == "Archlinux"
