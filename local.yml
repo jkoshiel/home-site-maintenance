@@ -35,6 +35,14 @@
 
 - hosts: localhost
   connection: local
+  tags: workstation
+  become: true
+  tasks:
+    - include_tasks: roles/workstation/tasks/second-pass.yml
+      when: ansible_hostname in ["ArchDesktop", "ArchLaptop", "Archtestmachine"]
+
+- hosts: localhost
+  connection: local
   tags: file_server
   become: true
   tasks:
