@@ -1,17 +1,7 @@
-- name: software | all basic packages | Arch
-  tags: packages,workstation-packages
+- name: software | all basic packages
+  tags: packages
   package:
     name: 
       - rsync
     state: latest
-  when:
-    - ansible_distribution == "Archlinux"
 
-- name: software | all basic packages | Ubuntu
-  tags: packages,workstation-packages
-  package:
-    name: 
-      - rsync
-    state: latest
-  when:
-    - ansible_distribution in ["Ubuntu", "Debian"]

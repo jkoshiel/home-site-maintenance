@@ -8,7 +8,7 @@
   tags: ansible,ansible-setup
   become: true
   file:
-    path: ./ansible.log
+    path: ~/.ansible/ansible.log
     mode: 0664
     state: touch
   changed_when: False

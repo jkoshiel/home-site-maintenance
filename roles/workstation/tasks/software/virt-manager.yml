@@ -10,10 +10,24 @@
   when:
     - ansible_distribution == "Archlinux"
 
-- name: software | enable libvirt 
+- name: software | enable libvirt
   tags: packages,workstation-packages,virt-manager
-  become: true
-  shell: |
-    systemctl enable --now libvirtd
-    usermod -G libvirt -a jem
+  systemd:
+    name: libvirtd
+    state: started
+    enabled: yes
 
+- name: software | add jem to libvirt group
+  tags: packages,workstation-packages,virt-manager
+  user:
+    name: jem
+    groups: libvirt
+
+
+#- name: software | enable libvirt 
+#  tags: packages,workstation-packages,virt-manager
+#  become: true
+#  shell: |
+#    systemctl enable --now libvirtd
+#    usermod -G libvirt -a jem
+#
