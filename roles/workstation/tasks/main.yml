@@ -8,10 +8,14 @@
 
   ## install software
   - import_tasks: software/basics.yml
-  - import_tasks: software/aurpackages.yml
   - import_tasks: software/sddm.yml
   - import_tasks: software/hack-nerd-font.yml
   - import_tasks: software/install-alacritty.yml
   - import_tasks: software/qtile.yml
   - import_tasks: software/qutebrowser.yml
   - import_tasks: software/virt-manager.yml
+
+## install aur packages as a separate block to get
+## kewlfft installed ahead of ansible checking to see if it exists
+- block:
+  - import_tasks: software/aurpackages.yml
