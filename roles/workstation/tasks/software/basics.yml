@@ -9,6 +9,7 @@
       - firefox
       - gawk
       - gimp
+      - gtar
       - keychain
       - man-db
       - make
@@ -27,8 +28,10 @@
       - tar
       - traceroute
       - unclutter
+      - unzip
       - vim
       - yt-dlp
+      - zip
     state: latest
   when:
     - ansible_distribution == "Archlinux"
