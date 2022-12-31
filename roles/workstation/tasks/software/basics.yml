@@ -33,3 +33,14 @@
   when:
     - ansible_distribution == "Archlinux"
 
+- name: software | install kewlfft.aur
+  tags: packages,workstation-packages,kewlfft,aur
+  shell: |
+    ansible-galaxy collection build --force
+    ansible-galaxy collection install --force "./kewlfft-aur-$(cat galaxy.yml | grep version: | awk '{print $2}').tar.gz"
+
+- name: software | install paru
+  kewlfft.aur.aur:
+    name: paru
+    use: makepkg
+    state: present
