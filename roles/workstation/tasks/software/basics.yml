@@ -22,6 +22,7 @@
       - python
       - python-pip
       - qutebrowser
+      - qt5
       - reflector
       - rust
       - tar
