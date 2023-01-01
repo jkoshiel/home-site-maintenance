@@ -2,10 +2,10 @@
   tags: packages,workstation-packages,virt-manager
   package:
     name:
-      - qemu
+      - qemu-full
       - virt-manager
       - libvirt
-      - iptables-nft
+#      - iptables-nft
     state: latest
   when:
     - ansible_distribution == "Archlinux"
