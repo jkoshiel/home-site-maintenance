@@ -15,12 +15,12 @@
 - name: software | sddm | get sugar-candy theme
   get_url:
     url: "https://framagit.org/MarianArlt/sddm-sugar-candy/-/archive/master/sddm-sugar-candy-master.tar.gz"
-    dest: /home/jem/sugar-candy.tar.gz
+    dest: /home/jem/downloads/sugar-candy.tar.gz
   when:
     - ansible_distribution == "Archlinux"
 
 - name: software | sddm | install sugar-candy theme
-  command: tar -xzvf /home/jem/sugar-candy.tar.gz -C /usr/share/sddm/themes/  
+  command: tar -xzvf /home/jem/downloads/sugar-candy.tar.gz -C /usr/share/sddm/themes/  
   when:
     - ansible_distribution == "Archlinux"
 
