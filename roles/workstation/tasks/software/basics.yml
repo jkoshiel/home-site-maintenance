@@ -18,6 +18,7 @@
       - npm
       - obs-studio
       - pcmanfm
+      - picom
       - pipewire
       - python
       - python-pip
