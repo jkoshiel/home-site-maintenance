@@ -10,6 +10,7 @@
     - {dir: .config }
     - {dir: .config/alacritty }
     - {dir: .config/qtile }
+    - {dir: .config/qutebrowser }
     - {dir: .config/lvim }
     - {dir: .keychain }
     - {dir: documents }
