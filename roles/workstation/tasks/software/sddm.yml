@@ -12,18 +12,25 @@
   when:
     - ansible_distribution == "Archlinux"
 
-- name: software | sddm | get sugar-candy theme
-  get_url:
-    url: "https://framagit.org/MarianArlt/sddm-sugar-candy/-/archive/master/sddm-sugar-candy-master.tar.gz"
-    dest: /home/rosie/sugar-candy.tar.gz
-    mode: 0644
-  when:
-    - ansible_distribution == "Archlinux"
+- name: software | sugar-candy theme from aur
+  tags: packages,workstation-packages,sddm
+  kewlfft.aur.aur:
+    use: paru
+    name: sddm-sugar-candy-git
+    state: present
 
-- name: software | sddm | install sugar-candy theme
-  command: tar -xzvf /home/rosie/downloads/sugar-candy.tar.gz -C /usr/share/sddm/themes/  
-  when:
-    - ansible_distribution == "Archlinux"
+#- name: software | sddm | get sugar-candy theme
+#  get_url:
+#    url: "https://framagit.org/MarianArlt/sddm-sugar-candy/-/archive/master/sddm-sugar-candy-master.tar.gz"
+#    dest: /home/rosie/sugar-candy.tar.gz
+#    mode: 0644
+#  when:
+#    - ansible_distribution == "Archlinux"
+#
+#- name: software | sddm | install sugar-candy theme
+#  command: tar -xzvf /home/rosie/sugar-candy.tar.gz -C /usr/share/sddm/themes/  
+#  when:
+#    - ansible_distribution == "Archlinux"
 
 - name: software | sddm | install background image and config file
   tags: workstation-packages,sddm,workstation-packages
