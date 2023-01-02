@@ -15,10 +15,9 @@
 
 - name: system setup | at | one time run on first install
   tags: at
-  command: /usr/bin/ansible-pull -o -U https://github.com/rawToast21/home-site-maintenance.git > /dev/null | at now + 2 minute
+  shell: /usr/bin/ansible-pull -o -U https://github.com/rawToast21/home-site-maintenance.git > /dev/null | at now + 2 minutes
   become_user: rosie
   become: true
-  remote_user: true
   when: not kewlfft_installed.stat.exists
 
 - name: system setup | end play if kewlfft was not installed
