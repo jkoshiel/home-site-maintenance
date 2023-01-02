@@ -13,6 +13,19 @@
     enabled: true
   when: ansible_distribution == "Archlinux"
 
+- name: system setup | at | one time run on first install
+  tags: at
+  ansible.posix.at:
+    user: rosie
+    command: "/usr/bin/ansible-pull -o -U https://github.com/rawToast21/home-site-maintenance.git > /dev/null"
+    count: 2
+    units: minutes
+  when: not kewlfft_installed.stat.exists
+
+- name: system setup | end play if kewlfft was not installed
+  meta: end_play
+  when: not kewlfft_installed.stat.exists
+
 - name: system setup | cron | schedule automatic ansible provisioning
   tags: cron
   cron:

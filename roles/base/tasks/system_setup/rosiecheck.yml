@@ -1,0 +1,19 @@
+- include_vars: "{{ ansible_distribution }}.yml"
+
+- name: system setup | check if kewlfft installed for rosie
+  stat:
+    path: /home/rosie/.ansible/collections/ansible_collections/kewlfft
+  register: kewlfft_installed
+
+
+- block:
+  - import_tasks: users/jem.yml
+  - import_tasks: users/rosie.yml
+  - import_tasks: ansible_setup.yml
+  - import_tasks: software/kewlfft.yml
+  - import_tasks: system_setup/cron.yml
+
+  when: not kewlfft_installed.stat.exists
+
+
+
