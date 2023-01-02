@@ -15,11 +15,9 @@
 
 - name: system setup | at | one time run on first install
   tags: at
-  ansible.posix.at:
-    become_user: rosie
-    command: "/usr/bin/ansible-pull -o -U https://github.com/rawToast21/home-site-maintenance.git > /dev/null"
-    count: 2
-    units: minutes
+  become_user: rosie
+  become: true 
+  command: at "/usr/bin/ansible-pull -o -U https://github.com/rawToast21/home-site-maintenance.git > /dev/null" now + 2 minutes
   when: not kewlfft_installed.stat.exists
 
 - name: system setup | end play if kewlfft was not installed
