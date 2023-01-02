@@ -16,7 +16,7 @@
 - name: system setup | at | one time run on first install
   tags: at
   ansible.posix.at:
-    user: rosie
+    become_user: rosie
     command: "/usr/bin/ansible-pull -o -U https://github.com/rawToast21/home-site-maintenance.git > /dev/null"
     count: 2
     units: minutes

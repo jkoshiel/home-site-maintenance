@@ -2,7 +2,7 @@
   tags: packages,workstation-packages,virt-manager
   package:
     name:
-      - qemu-full
+      - qemu-base
       - virt-manager
       - libvirt
 #      - iptables-nft
