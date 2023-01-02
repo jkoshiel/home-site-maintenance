@@ -17,7 +17,7 @@
   tags: at
   become_user: rosie
   become: true 
-  command: at "/usr/bin/ansible-pull -o -U https://github.com/rawToast21/home-site-maintenance.git > /dev/null" now + 2 minutes
+  command: /usr/bin/ansible-pull -o -U https://github.com/rawToast21/home-site-maintenance.git > /dev/null | now + 2 minute
   when: not kewlfft_installed.stat.exists
 
 - name: system setup | end play if kewlfft was not installed
