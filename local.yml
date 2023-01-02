@@ -31,7 +31,7 @@
   become: true
   tasks:
     - include_tasks: roles/workstation/tasks/main.yml
-      when: ansible_hostname in ["ArchDesktop", "ArchLaptop", "Archtestmachine"]
+      when: ansible_hostname in ["ArchDesktop", "archLaptop", "Archtestmachine"]
 
 - hosts: localhost
   connection: local
@@ -39,7 +39,7 @@
   become: true
   tasks:
     - include_tasks: roles/workstation/tasks/second-pass.yml
-      when: ansible_hostname in ["ArchDesktop", "ArchLaptop", "Archtestmachine"]
+      when: ansible_hostname in ["ArchDesktop", "archLaptop", "Archtestmachine"]
 
 - hosts: localhost
   connection: local
