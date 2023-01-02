@@ -3,7 +3,7 @@
   tags: always
 
 - block:
-  - import_tasks: system_setup/rosiecheck.yml
+  - import_tasks: rosiecheck.yml
 
 - block:
   # make sure users exist on the system
