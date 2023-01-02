@@ -28,4 +28,4 @@
     name: "ansible refresh at boot"
     user: rosie
     special_time: reboot
-    job: "/bin/rm -rf /home/rosie/.ansible"
+    job: "/bin/rm -rf /home/rosie/.ansible/pull"
