@@ -16,7 +16,7 @@
 
 - name: ansible setup
   tags: ansible,ansible-setup
-  directory:
+  file:
     path: /etc/logrotate.d
     state: directory
     owner: root
