@@ -1,5 +1,5 @@
 - name: software | install paru
-  kewlfft.aur.aur:
+  aur:
     name: paru
     use: makepkg
     state: present
