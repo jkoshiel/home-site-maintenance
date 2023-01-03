@@ -33,14 +33,6 @@
     - include_tasks: roles/workstation/tasks/main.yml
       when: ansible_hostname in ["ArchDesktop", "archLaptop", "arch-vm"]
 
-#- hosts: localhost
-#  connection: local
-#  tags: workstation
-#  become: true
-#  tasks:
-#    - include_tasks: roles/workstation/tasks/second-pass.yml
-#      when: ansible_hostname in ["ArchDesktop", "archLaptop", "arch-vm"]
-#
 - hosts: localhost
   connection: local
   tags: file_server
