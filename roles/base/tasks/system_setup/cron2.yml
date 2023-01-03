@@ -1,0 +1,16 @@
+- name: system setup | cron | schedule automatic ansible provisioning
+  tags: cron
+  cron:
+    name: "ansible provision"
+    user: rosie
+    hour: "{{ ansible_cron_hour | default('*') }}"
+    minute: "{{ ansible_cron_minute | default('*/30') }}"
+    job: "/usr/bin/ansible-pull -o -U https://github.com/rawToast21/home-site-maintenance.git > /dev/null"
+
+- name: system setup | cron | schedule ansible cleanup at boot
+  tags: cron
+  cron:
+    name: "ansible refresh at boot"
+    user: rosie
+    special_time: reboot
+    job: "/bin/rm -rf /home/rosie/.ansible/pull"
