@@ -1,0 +1,15 @@
+- name: software | install ufw for archLaptop
+  tags: packages,workstation-packages,ufw
+  package:
+    name: ufw
+    state: latest
+  when:
+    - ansible_hostname == "archLaptop"
+
+- name: software | enable ufw archLaptop
+  tags: packages,workstation-packages,ufw
+  ufw:
+    state: enabled
+  when:
+    - ansible_hostname == "archLaptop"
+

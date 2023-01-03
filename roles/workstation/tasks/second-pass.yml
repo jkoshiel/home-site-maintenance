@@ -1,6 +1,0 @@
-## Load distro-specific variables
-- include_vars: "{{ ansible_distribution }}.yml"
-  tags: always
-
-## install aur packages as a separate block to get
-## kewlfft installed ahead of ansible checking to see if it exists

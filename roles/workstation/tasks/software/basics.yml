@@ -37,16 +37,3 @@
   when:
     - ansible_distribution == "Archlinux"
 
-- name: software | install kewlfft aur
-  tags: packages,workstation-packages,kewlfft,aur
-  shell: | 
-    ansible-galaxy collection install kewlfft.aur
-  become: yes
-  become_user: rosie
-
-- name: software | install kewlfft aur
-  tags: packages,workstation-packages,kewlfft,aur
-  shell: | 
-    ansible-galaxy collection install kewlfft.aur
-  become: yes
-  become_user: jem
