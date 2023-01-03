@@ -13,4 +13,6 @@
   - import_tasks: software/qtile.yml
   - import_tasks: software/qutebrowser.yml
   - import_tasks: software/virt-manager.yml
+  - import_tasks: software/aurpackages.yml
+  - import_tasks: software/sddm.yml
 
