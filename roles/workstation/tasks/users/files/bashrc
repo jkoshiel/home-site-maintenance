@@ -1,14 +1,6 @@
 #
 # ~/.bashrc
 
-function hg() {
-  history | grep "$1";
-}
-
-function getlines {
-  git ls-files | grep "$1" | xargs wc -l;
-}
-
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -22,6 +14,18 @@ shopt -s histappend
 PROMPT_COMMAND="history -n; history -a"
 unset HISTFILESIZE
 HISTSIZE=2000
+
+function hg() {
+  history | grep "$1";
+}
+
+function getlines {
+  git ls-files | grep "$1" | xargs wc -l;
+}
+
+function ansiblelog {
+  sudo cat /home/rosie/.ansible/ansible.log
+}
 
 # THIS MUST BE AT TEH END OF HTE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
