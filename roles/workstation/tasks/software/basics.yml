@@ -27,6 +27,7 @@
       - reflector
       - rust
       - tar
+      - tcpdump
       - traceroute
       - unclutter
       - unzip
