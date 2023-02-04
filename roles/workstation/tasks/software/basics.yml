@@ -2,6 +2,7 @@
   tags: packages,workstation-packages
   package:
     name: 
+      - bat
       - chromium
       - cups
       - discord
