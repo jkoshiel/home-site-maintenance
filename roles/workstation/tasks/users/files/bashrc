@@ -9,6 +9,7 @@
 alias ls='exa'
 PS1='[\u@\h \W]\$ '
 export PATH="/home/jem/.local/bin:$PATH"
+export PATH="$PATH:/home/jem/.cargo/bin"
 eval $(keychain --eval --quiet id_ed25519 id_rsa ~/.ssh/LocalKey)
 
 shopt -s histappend
@@ -17,7 +18,7 @@ unset HISTFILESIZE
 HISTSIZE=2000
 
 function hg() {
-  history | ripgrep "$1";
+  history | rg "$1";
 }
 
 function getlines {
