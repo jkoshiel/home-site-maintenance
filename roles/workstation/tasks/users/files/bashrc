@@ -5,7 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
+# alias ls='ls --color=auto'
+alias ls='exa'
 PS1='[\u@\h \W]\$ '
 export PATH="/home/jem/.local/bin:$PATH"
 eval $(keychain --eval --quiet id_ed25519 id_rsa ~/.ssh/LocalKey)
