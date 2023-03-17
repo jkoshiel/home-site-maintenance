@@ -17,7 +17,7 @@ unset HISTFILESIZE
 HISTSIZE=2000
 
 function hg() {
-  history | grep "$1";
+  history | ripgrep "$1";
 }
 
 function getlines {
