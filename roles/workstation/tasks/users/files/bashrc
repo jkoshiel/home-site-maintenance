@@ -8,7 +8,6 @@
 # alias ls='ls --color=auto'
 alias ls='exa'
 alias cat='bat'
-eval "$(zoxide init bash)"
 PS1='[\u@\h \W]\$ '
 export PATH="/home/jem/.local/bin:$PATH"
 export PATH="$PATH:/home/jem/.cargo/bin"
