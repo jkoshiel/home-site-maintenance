@@ -22,7 +22,7 @@
 
 - name: software | unzip Hack nerdfont
   unarchive:
-    src: /home/jem/downloads/hack/Hack.zip
+    src: /home/jem/downloads/Hack.zip
     dest: /usr/share/fonts/Hack/
     owner: jem
     group: jem
