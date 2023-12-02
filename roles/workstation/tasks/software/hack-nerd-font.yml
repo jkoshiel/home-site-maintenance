@@ -2,7 +2,7 @@
   tags: nerdfont,Hack
   get_url:
     url: https://github.com/ryanoasis/nerd-fonts/releases/tag/v3.1.1/Hack.zip
-    dest: /home/jem/downloads/
+    dest: /home/jem/downloads/hack
     group: jem
     owner: jem
     mode: 0755
@@ -22,7 +22,7 @@
 
 - name: software | unzip Hack nerdfont
   unarchive:
-    src: /home/jem/downloads/Hack.zip
+    src: /home/jem/downloads/hack/Hack.zip
     dest: /usr/share/fonts/Hack/
     owner: jem
     group: jem
