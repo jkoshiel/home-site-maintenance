@@ -3,5 +3,6 @@
   package:
     name: 
       - rsync
+      - unzip
     state: latest
 
