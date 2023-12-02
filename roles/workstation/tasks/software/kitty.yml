@@ -15,7 +15,7 @@
     group: jem
     mode: 0600
   with_items:
-    - { src: 'kitty.yml', dest: 'kitty.yml' }
+    - { src: 'kitty.conf', dest: 'kitty.conf' }
     - { src: 'current-theme.conf', dest: 'current-theme.conf' }
   when:
     - ansible_distribution == "Archlinux"
