@@ -39,3 +39,5 @@ function ansiblelog {
 # THIS MUST BE AT TEH END OF HTE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "#HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+eval "$(starship init bash)"
