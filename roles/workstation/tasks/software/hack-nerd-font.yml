@@ -3,9 +3,9 @@
   get_url:
     url: https://github.com/ryanoasis/nerd-fonts/releases/tag/v3.1.1/Hack.zip
     dest: /home/jem/downloads/
-    group: jem
-    owner: jem
-    mode: 0755
+    # group: jem
+    # owner: jem
+    # mode: 0755
     timeout: 20
   when:
     - ansible_distribution == "Archlinux"
