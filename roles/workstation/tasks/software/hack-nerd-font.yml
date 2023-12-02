@@ -1,7 +1,7 @@
 - name: software | download Hack nerdfont
   tags: nerdfont,Hack
   get_url:
-    url: https://github.com/ryanoasis/nerd-fonts/releases/tag/v3.1.1/Hack.zip
+    url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Hack.zip
     dest: /home/jem/downloads/
     # group: jem
     # owner: jem
