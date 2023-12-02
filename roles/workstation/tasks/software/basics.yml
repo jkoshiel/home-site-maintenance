@@ -27,6 +27,7 @@
       - qt5
       - reflector
       - rust
+      - starship
       - tar
       - tcpdump
       - traceroute

@@ -9,6 +9,8 @@
   with_items:
     - {dir: .config }
     - {dir: .config/alacritty }
+    - {dir: .config/fish }
+    - {dir: .config/helix }
     - {dir: .config/qtile }
     - {dir: .config/qutebrowser }
     - {dir: .config/lvim }
@@ -63,6 +65,7 @@
     - { src: 'wallpapers', dest: 'wallpapers/' }
     - { src: 'bashrc', dest: '.bashrc' }
     - { src: 'xprofile', dest: '.xprofile' }
+    - { src: 'starship.toml', dest: '.config/starship.toml' }
 
 - name: users | jem | copy triple monitor config
   tags: jem,dotfiles,users

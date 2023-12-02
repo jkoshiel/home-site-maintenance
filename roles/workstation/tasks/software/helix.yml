@@ -1,0 +1,23 @@
+- name: software | helix
+  tags: packages,workstation-packages,helix
+  package:
+    name: helix
+    state: latest
+  when:
+    - ansible_distribution == "Archlinux"
+
+- name: software | helix | dotfile
+  tags: workstation-packages,helix,workstation-packages
+  copy:
+    src: files/helix/{{ item.src }}
+    dest: /home/jem/.config/helix/{{ item.dest }}
+    owner: jem
+    group: jem
+    mode: 0600
+  with_items:
+    - { src: 'config.toml', dest: 'config.toml' }
+    - { src: 'languages.toml', dest: 'languages.toml' }
+  when:
+    - ansible_distribution == "Archlinux"
+
+

@@ -1,0 +1,46 @@
+[[language]]
+name = "rust"
+auto-format = true
+
+[language-server.rust-analyser]
+command = "rust-analyser"
+
+[language-server.rust-analyzer.config]
+inlayHints.bindingModeHints.enable = false
+inlayHints.closingBraceHints.minLines = 10
+inlayHints.closureReturnTypeHints.enable = "width_block"
+inlayHints.discriminantHints.enable = "fieldless"
+inlayHints.lifetimeElisionHints.enable = "skip_trivial"
+inlayHints.typeHints.hideClosureInitialization = false
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
+[[language]]
+name = "yaml"
+file-types = ["yaml", "yml"]
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+
+
+[[language]]
+name = "awk"
+auto-format = true
+
+[[language]]
+name = "cpp"
+auto-format = true
+
+
+[[language]]
+name = "c"
+auto-format = true
+
+[[language]]
+name = "toml"
+auto-format = true
+
+[[language]]
+name = "markdown"
+auto-format = true
+language-servers = [ "marksman" ]
