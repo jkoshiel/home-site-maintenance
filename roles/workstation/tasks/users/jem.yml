@@ -64,8 +64,10 @@
   with_items: 
     - { src: 'wallpapers', dest: 'wallpapers/' }
     - { src: 'bashrc', dest: '.bashrc' }
+    - { src: 'zshrc', dest: '.zshrc' }
     - { src: 'xprofile', dest: '.xprofile' }
     - { src: 'starship.toml', dest: '.config/starship.toml' }
+    - { src: 'fish/config.fish', dest: '.config/fish/config.fish' }
 
 - name: users | jem | copy triple monitor config
   tags: jem,dotfiles,users

@@ -1,0 +1,38 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=3000
+setopt autocd extendedglob nomatch notify
+unsetopt beep
+bindkey -v
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/jem/.zshrc'
+
+# End of lines added by compinstall
+autoload -U colors && colors
+
+# auto/tab complete
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)	
+
+alias cat='bat'
+alias ls='exa'
+alias tree='exa  --tree' $argv
+
+function hg {
+  history | rg "$1";
+}
+
+function getlines {
+  git ls-files | rg "$1" | xargs wc -l;
+}
+
+function ansiblelog {
+  sudo cat /home/rosie/.ansible/ansible.log
+}
+
+eval "$(starship init zsh)"
