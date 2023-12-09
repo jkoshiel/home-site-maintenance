@@ -11,6 +11,8 @@ feh --bg-fill /home/jem/wallpapers/wallpapers/0087.jpg &
 # zsh config dir
 export ZDOTDIR=$HOME/.config/zsh
 
+# screen layout
+xrandr --output HDMI-1 --primary --mode 2560x1440 --pos 2560x0 --rotate normal --output HDMI-3 --mode 2560x1440 --pos 5120x0 --rotate normal --output HDMI-4 --mode 2560x1440 --pos 0x0 --rotate normal --output DP-1 --off --output DP-2 --off --output DP-3 --off --output DP-4 --off
 
 export PATH="/home/jem/.local/bin:$PATH"
 export PATH="$PATH:/home/jem/.cargo/bin"
