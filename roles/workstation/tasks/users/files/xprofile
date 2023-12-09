@@ -6,7 +6,7 @@ picom -f &
 unclutter --jitter 1- --ignore-scrolling --start-hidden --fork
 
 # set the wallpaper
-feh --bg-fill /home/jem/wallpapers/wallpapers/0087.jpg &
+feh --bg-fill /home/jem/wallpapers/wallpapers/0232.jpg &
 
 # zsh config dir
 export ZDOTDIR=$HOME/.config/zsh
