@@ -37,6 +37,9 @@
       - vim
       - yt-dlp
       - zip
+      - zsh
+      - zsh-autosuggestions
+      - zsh-syntax-highlighting
     state: latest
   when:
     - ansible_distribution == "Archlinux"

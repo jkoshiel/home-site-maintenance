@@ -13,11 +13,11 @@ export PATH="/home/jem/.local/bin:$PATH"
 export PATH="$PATH:/home/jem/.cargo/bin"
 eval $(keychain --eval --quiet id_ed25519 id_rsa ~/.ssh/LocalKey)
 
-if [[ $(ps --no-header --pid=$PPID --format=comm) != "fish" && -z ${BASH_EXECUTION_STRING} ]]
-then
-	shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=''
-	exec fish $LOGIN_OPTION
-fi
+# if [[ $(ps --no-header --pid=$PPID --format=comm) != "fish" && -z ${BASH_EXECUTION_STRING} ]]
+# then
+# 	shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=''
+# 	exec fish $LOGIN_OPTION
+# fi
 
 shopt -s histappend
 PROMPT_COMMAND="history -n; history -a"
@@ -36,8 +36,4 @@ function ansiblelog {
   sudo cat /home/rosie/.ansible/ansible.log
 }
 
-# THIS MUST BE AT TEH END OF HTE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "#HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-eval "$(starship init bash)"
+# eval "$(starship init bash)"

@@ -13,6 +13,7 @@
     - {dir: .config/helix }
     - {dir: .config/qtile }
     - {dir: .config/qutebrowser }
+    - {dir: .config/zsh }
     - {dir: .config/lvim }
     - {dir: .keychain }
     - {dir: documents }
@@ -64,7 +65,7 @@
   with_items: 
     - { src: 'wallpapers', dest: 'wallpapers/' }
     - { src: 'bashrc', dest: '.bashrc' }
-    - { src: 'zshrc', dest: '.zshrc' }
+    - { src: 'zshrc', dest: '.config/zsh/.zshrc' }
     - { src: 'xprofile', dest: '.xprofile' }
     - { src: 'starship.toml', dest: '.config/starship.toml' }
     - { src: 'fish/config.fish', dest: '.config/fish/config.fish' }
