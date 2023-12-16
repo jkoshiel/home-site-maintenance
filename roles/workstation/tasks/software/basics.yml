@@ -18,6 +18,7 @@
       - nodejs
       - noto-fonts-emoji
       - npm
+      - obsidian
       - obs-studio
       - pcmanfm
       - picom
@@ -37,6 +38,7 @@
       - vim
       - yt-dlp
       - zip
+      - zoxide
       - zsh
       - zsh-autosuggestions
       - zsh-syntax-highlighting
